@@ -18,53 +18,22 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-    {
-      title: 'Product',
-      links: [
-        { text: 'Features', href: getPermalink('/services') },
-        { text: 'Pricing', href: getPermalink('/pricing') },
-        { text: 'Case Studies', href: '#' },
-        { text: 'Documentation', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About Us', href: getPermalink('/about') },
-        { text: 'Careers', href: '#' },
-        { text: 'Contact', href: getPermalink('/contact') },
-        { text: 'Partners', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Help Center', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Service Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { text: 'Privacy Policy', href: getPermalink('/privacy') },
-        { text: 'Terms of Service', href: getPermalink('/terms') },
-        { text: 'Cookie Policy', href: '#' },
-      ],
-    },
-  ],
+  links: [],
   secondaryLinks: [
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms of Service', href: getPermalink('/terms') },
   ],
   socialLinks: [
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/LocalAI-Agent' },
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/LocalAI-Agent' },
+    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: '#', class: 'opacity-50' },
+    { ariaLabel: 'Reddit', icon: 'tabler:brand-reddit', href: '#', class: 'opacity-50' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} LocalAI-Agent. All rights reserved.
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
+      <div class="text-sm">
+        © ${new Date().getFullYear()} LocalAI Agent. All rights reserved.
+      </div>
+    </div>
   `,
 };

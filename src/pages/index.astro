@@ -3,35 +3,30 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import Features2 from '~/components/widgets/Features2.astro';
-import Features from '~/components/widgets/Features.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Brands from '~/components/widgets/Brands.astro';
-
 const metadata = {
-  title: 'LocalAI-Agent - Intelligent Technology Solutions',
+  title: 'LocalAI Agent - Enterprise AI Solutions',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Section ******************* -->
 
   <Hero
-    tagline="Welcome"
+    tagline="Currently building. Early access coming soon."
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
+        text: 'Join the Waitlist',
         href: getPermalink('/contact'),
       },
       {
         variant: 'secondary',
-        text: 'Book a Demo',
-        href: getPermalink('/contact'),
+        text: 'Follow Us',
+        href: 'https://github.com/LocalAI-Agent',
+        target: '_blank',
       },
     ]}
   >
@@ -40,233 +35,145 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Deploy local AI models and run enterprise-grade AI agents with integrated hardware and software solutions.
+      Deploy local AI models and run enterprise-grade AI agents securely on your own infrastructure.
     </Fragment>
   </Hero>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Vision Section **************** -->
 
-  <Features2
-    title="About Us"
-    subtitle="LocalAI-Agent is committed to providing leading AI solutions for enterprises. Our team consists of experienced engineers and data scientists focused on transforming cutting-edge technology into practical business applications, helping clients maintain competitive advantages in digital transformation."
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <section class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">
+          The Future of Enterprise AI is Local
+        </h2>
+        <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300">
+          <p>
+            Cloud AI is powerful, but enterprises need more control over their data and infrastructure.
+          </p>
+          <p>
+            LocalAI Agent empowers businesses to deploy AI models locally and run enterprise-grade AI agents for secure, private, and efficient workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Your Trusted Technology Partner"
-    subtitle="Our results demonstrate the trust our clients have placed in us and the exceptional value we've helped them achieve."
-    stats={[
-      { title: 'Enterprises Served', amount: '200+' },
-      { title: 'Projects Delivered', amount: '500+' },
-      { title: 'Customer Satisfaction', amount: '98%' },
-      { title: 'Technical Support', amount: '24/7' },
-    ]}
-  />
-
-  <!-- Brands Widget ****************** -->
-
-  <Brands
-    title="Our Partners"
-    subtitle="We collaborate with industry-leading companies to drive technological innovation."
-    icons={[]}
-    images={[
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our Services"
-    subtitle="Comprehensive AI technology solutions for enterprises"
-    items={[
-      {
-        title: 'AI Consulting',
-        description:
-          'Professional AI consulting services to help evaluate business scenarios and develop AI implementation strategies.',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Custom Development',
-        description:
-          'Customized AI model development and system integration services based on your specific business needs.',
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Technical Support & Training',
-        description:
-          'Comprehensive technical support and team training to ensure smooth operation and continuous optimization of AI systems.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Features Widget *************** -->
+  <!-- What We Are Building ********** -->
 
   <Features
-    id="features"
-    title="Core Advantages"
-    subtitle="Our technology and services feature the following characteristics"
+    title="What We Are Building"
+    subtitle="Building the future of enterprise AI with local deployment and intelligent automation"
     columns={3}
     items={[
       {
-        title: 'Advanced Technology Architecture',
-        description:
-          'Utilizing the latest AI technologies and architecture to ensure system performance and technical leadership.',
-        icon: 'tabler:artboard',
+        title: 'Local AI Deployment',
+        description: 'Run advanced AI models directly on your own infrastructure for full control and privacy.',
+        icon: 'tabler:server',
       },
       {
-        title: 'Flexible Deployment Options',
-        description: 'Supporting cloud, on-premise, and hybrid deployment to meet different enterprise security and compliance requirements.',
-        icon: 'tabler:picture-in-picture',
+        title: 'Enterprise AI Agents',
+        description: 'Intelligent agents that automate workflows and interact with your internal systems.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Highly Customizable',
-        description:
-          'Customize features and interfaces based on specific business needs, perfectly matching your business processes.',
-        icon: 'tabler:adjustments-horizontal',
-      },
-      {
-        title: 'Fast Integration',
-        description: 'Providing comprehensive APIs and SDKs for quick integration with existing systems.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Data Security',
-        description:
-          'Enterprise-grade security measures to ensure data privacy and compliance.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Wide Compatibility',
-        description: 'Compatible with mainstream technology stacks and platforms, reducing the barrier to use.',
-        icon: 'tabler:plug-connected',
+        title: 'Integrated Hardware & Software',
+        description: 'A complete stack optimized for reliable and efficient local AI deployment.',
+        icon: 'tabler:cpu',
       },
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Why Local AI ****************** -->
 
-  <FAQs
-    title="Frequently Asked Questions"
+  <Features
+    title="Why Local AI?"
+    subtitle="Take control of your AI infrastructure and data"
+    columns={2}
     items={[
       {
-        title: 'What services do you provide?',
-        description:
-          'We provide comprehensive services including AI consulting, custom development, system integration, and technical training. From needs assessment to implementation, from deployment to ongoing maintenance, we accompany you throughout your AI transformation journey.',
+        title: 'Data Privacy & Security',
+        description: 'Keep sensitive enterprise data inside your organization.',
+        icon: 'tabler:shield-lock',
       },
       {
-        title: 'How do we get started?',
-        description:
-          'You can start by contacting our sales team. We will arrange a professional technical consultant to communicate with you, understand your needs, and provide a customized solution and quotation.',
+        title: 'Low Latency',
+        description: 'Immediate AI responses without cloud dependency.',
+        icon: 'tabler:bolt',
       },
       {
-        title: 'What is the project timeline?',
-        description:
-          'The project timeline depends on specific requirements and scale. Simple integration projects may take 2-4 weeks, while complex custom development may take 2-6 months. We will provide you with a detailed timeline after evaluation.',
+        title: 'Full Infrastructure Control',
+        description: 'Customize your AI environment for your business.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'What deployment options do you support?',
-        description:
-          'We support multiple deployment options including public cloud, private cloud, on-premise deployment, and hybrid deployment. You can choose the most suitable solution based on security requirements and business needs.',
-      },
-      {
-        title: 'Do you provide after-sales support?',
-        description:
-          'Yes, we provide comprehensive after-sales support including technical support, system maintenance, feature upgrades, and performance optimization. We also offer SLA service guarantees.',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Contact Us"
-    subtitle="We're here to answer any questions you may have."
-    columns={4}
-    items={[
-      {
-        title: 'Phone',
-        icon: 'tabler:phone',
-        callToAction: {
-          text: 'Call Us',
-          href: getPermalink('/contact'),
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Email',
-        icon: 'tabler:mail',
-        callToAction: {
-          text: 'Send Email',
-          href: 'mailto:info@localai-agent.com',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Online Chat',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          text: 'Start Chat',
-          href: getPermalink('/contact'),
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Technical Support',
-        icon: 'tabler:headset',
-        callToAction: {
-          text: 'Get Help',
-          href: getPermalink('/contact'),
-          variant: 'link',
-        },
+        title: 'No Cloud Dependency',
+        description: 'Reduce costs and risks of cloud-based AI.',
+        icon: 'tabler:cloud-off',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Join the Waitlist Section ***** -->
 
   <CallToAction
+    title="Be the First to Try LocalAI Agent"
+    subtitle="Join our early access list to be notified when we launch and get exclusive updates."
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
+        text: 'Join the Waitlist',
         href: getPermalink('/contact'),
       },
     ]}
-  >
-    <Fragment slot="title">Join Us in Shaping the Future</Fragment>
+  />
 
-    <Fragment slot="subtitle">
-      Contact us today to get your customized solution and start your AI transformation journey.
-    </Fragment>
-  </CallToAction>
+  <!-- Stay Connected Section ******* -->
+
+  <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Stay Connected
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-10">
+          Follow us on GitHub and Twitter to track our progress. Join our community soon on Discord and Reddit.
+        </p>
+        <div class="flex justify-center items-center space-x-6">
+          <a 
+            href="https://github.com/LocalAI-Agent" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors"
+            aria-label="GitHub"
+          >
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a 
+            href="https://twitter.com/LocalAI-Agent" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors"
+            aria-label="Twitter"
+          >
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <span class="text-gray-400 dark:text-gray-500" title="Coming soon" aria-label="Discord - Coming soon">
+            <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </span>
+          <span class="text-gray-400 dark:text-gray-500" title="Coming soon" aria-label="Reddit - Coming soon">
+            <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
