@@ -3,14 +3,6 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Services',
-      href: getPermalink('/services'),
-    },
-    {
-      text: 'Pricing',
-      href: getPermalink('/pricing'),
-    },
-    {
       text: 'About',
       href: getPermalink('/about'),
     },

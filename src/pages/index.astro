@@ -12,8 +12,6 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { YouTube } from 'astro-embed';
-
 const metadata = {
   title: 'LocalAI-Agent - Intelligent Technology Solutions',
 };
@@ -28,27 +26,21 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get Started',
-        href: getPermalink('/services'),
+        href: getPermalink('/contact'),
       },
-      { text: 'Learn More', href: '#features' },
+      {
+        variant: 'secondary',
+        text: 'Book a Demo',
+        href: getPermalink('/contact'),
+      },
     ]}
   >
     <Fragment slot="title">
-      Empower Your Business Growth with <span class="text-accent dark:text-white">Artificial Intelligence</span>
+      LocalAI Agent
     </Fragment>
 
     <Fragment slot="subtitle">
-      LocalAI-Agent provides cutting-edge AI solutions to help businesses achieve digital transformation, improve operational efficiency, and create greater business value.
-    </Fragment>
-
-    <Fragment slot="image">
-      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
-      <style is:inline>
-        lite-youtube {
-          margin: 0 auto;
-          max-width: 100%;
-        }
-      </style>
+      Deploy local AI models and run enterprise-grade AI agents with integrated hardware and software solutions.
     </Fragment>
   </Hero>
 
