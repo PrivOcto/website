@@ -1,6 +1,6 @@
 site:
-  name: LocalAI-Agent
-  site: 'https://localai-agent.com'
+  name: LocalAI Agent
+  site: 'https://localaiagent.tech'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: LocalAI-Agent
-    template: '%s — LocalAI-Agent'
-  description: "LocalAI-Agent provides leading AI solutions for enterprises, including AI consulting, custom development, and system integration services."
+    default: LocalAI Agent
+    template: '%s — LocalAI Agent'
+  description: "LocalAI Agent is building the next generation of enterprise AI infrastructure. We help organizations deploy AI models locally and run enterprise-grade AI agents directly on their own infrastructure."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: LocalAI-Agent
+    site_name: LocalAI Agent
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/local-ai-agent-edge-server-hardware.webp'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@localai-agent'
-    site: '@localai-agent'
+    handle: '@localai67177'
+    site: '@localai67177'
     cardType: summary_large_image
 
 i18n:
@@ -38,7 +38,7 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%'
+      permalink: '/blog/%slug%'
       robots:
         index: true
 
