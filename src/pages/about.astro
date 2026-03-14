@@ -1,6 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Features from '~/components/widgets/Features.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import heroImage from '~/assets/images/local-ai-server-infrastructure-hero.webp';
+import fortressImage from '~/assets/images/secure-digital-ai-fortress-concept.webp';
+import workflowImage from '~/assets/images/enterprise-ai-agent-workflow-interface.webp';
+import landscapeImage from '~/assets/images/integrated-ai-hardware-landscape.webp';
 
 const metadata = {
   title: 'About LocalAI Agent',
@@ -26,6 +33,22 @@ const metadata = {
         <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 font-semibold">
           Our mission is to make secure, private, and efficient AI deployment accessible to enterprises.
         </p>
+        
+        <!-- 1. Hero Image: After Mission Section -->
+        <div class="mt-12 w-full">
+          <Image
+            src={heroImage}
+            alt="A high-performance, compact enterprise edge server rack inside a modern, secure server room."
+            class="rounded-lg shadow-2xl w-full"
+            width={1920} 
+            height={1080} 
+            sizes="100vw"
+            style={{ objectFit: 'cover', height: '500px' }}
+          />
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+            LocalAI Agent — High-performance enterprise edge infrastructure
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -69,7 +92,7 @@ const metadata = {
             <div class="flex items-center mb-4">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold">Run intelligent AI agents</h3>
@@ -79,34 +102,106 @@ const metadata = {
             </p>
           </div>
         </div>
+        
+        <!-- 2. Conceptual Image: Between Vision & What We Do -->
+        <div class="mt-12 max-w-3xl mx-auto">
+          <Image
+            src={fortressImage}
+            alt="A 3D isometric visualization of a secure, private digital vault protecting a network of AI data nodes."
+            class="rounded-xl shadow-xl w-full"
+            width={1920} 
+            height={1080} 
+            sizes="100vw"
+            style={{ objectFit: 'cover', height: '500px' }}
+          />
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+            LocalAI Agent — Secure digital fortress for enterprise AI
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- What We Do Section ************ -->
 
-  <Features
-    title="What We Do"
-    subtitle="LocalAI Agent provides a complete stack for enterprise local AI deployment"
-    columns={3}
-    items={[
-      {
-        title: 'Local AI Infrastructure',
-        description: 'We provide optimized hardware solutions designed to run modern AI models efficiently on-premise.',
-        icon: 'tabler:server',
-      },
-      {
-        title: 'Local AI Model Deployment',
-        description: 'We deploy and configure AI models directly on enterprise infrastructure, ensuring reliable and secure AI operations.',
-        icon: 'tabler:cpu',
-      },
-      {
-        title: 'Enterprise AI Agents',
-        description: 'Our enterprise-grade agents automate business workflows and interact with internal systems, all running locally without relying on external cloud services.',
-        icon: 'tabler:robot',
-      },
-    ]}
-  />
+  <section class="py-16 md:py-24 bg-white dark:bg-gray-900 glass-card">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">
+          What We Do
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          <!-- 3. Workflow Image: Beside What We Do Text -->
+          <div>
+            <Image
+              src={workflowImage}
+              alt="A professional engineer working on a high-tech dashboard displaying autonomous AI agent workflows."
+              class="rounded-lg shadow-xl w-full"
+              width={1920} 
+              height={1080} 
+              sizes="100vw"
+              style={{ objectFit: 'cover', height: '500px' }}
+            />
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+              LocalAI Agent — Enterprise AI agent workflow management
+            </p>
+          </div>
+          
+          <!-- Text Content -->
+          <div class="space-y-6">
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+              LocalAI Agent provides a complete stack for enterprise local AI deployment.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Local AI Infrastructure</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    We provide optimized hardware solutions designed to run modern AI models efficiently on-premise.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Local AI Model Deployment</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    We deploy and configure AI models directly on enterprise infrastructure, ensuring reliable and secure AI operations.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Enterprise AI Agents</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Our enterprise-grade agents automate business workflows and interact with internal systems, all running locally without relying on external cloud services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Why Local AI Section ********** -->
 
@@ -240,9 +335,25 @@ const metadata = {
           </div>
         </div>
         
-        <p class="text-lg text-gray-600 dark:text-gray-300 text-center">
+        <p class="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
           This integrated architecture allows companies to deploy AI systems that are secure, efficient, and tailored to their needs.
         </p>
+        
+        <!-- 4. Banner Image: Above Footer -->
+        <div class="w-full">
+          <Image
+            src={landscapeImage}
+            alt="A wide-angle view of a modern, clean, and secure enterprise data center facility with glowing AI server clusters."
+            class="w-full rounded-lg shadow-2xl"
+            width={1920}
+            height={500}
+            sizes="100vw"
+            style={{ objectFit: 'cover', height: '500px' }}
+          />
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+            LocalAI Agent — Enterprise-grade AI infrastructure at scale
+          </p>
+        </div>
       </div>
     </div>
   </section>
