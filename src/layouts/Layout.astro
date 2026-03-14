@@ -40,7 +40,10 @@ const { language, textDirection } = I18N;
     <ClientRouter fallback="swap" />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body class="antialiased text-default bg-page dark:bg-dark tracking-tight min-h-screen">
+    <div class="fixed inset-0 pointer-events-none glow-primary dark:glow-primary-dark"></div>
+    <div class="fixed inset-0 pointer-events-none glow-accent dark:glow-accent-dark"></div>
+
     <slot />
 
     <BasicScripts />

@@ -39,7 +39,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Section ******************* -->
 
-  <section class="relative py-20 md:py-32 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+  <section class="relative py-20 md:py-32 overflow-hidden">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Content -->
@@ -70,7 +70,7 @@ const metadata = {
             </a>
           </div>
         </div>
-        
+
         <!-- Right: Image -->
         <div class="relative px-4">
           <Image
@@ -89,7 +89,7 @@ const metadata = {
 
   <!-- Vision Section **************** -->
 
-  <section class="relative py-16 md:py-24 bg-card overflow-hidden">
+  <section class="relative py-16 md:py-24 overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 pointer-events-none">
       <Image
@@ -99,13 +99,13 @@ const metadata = {
         widths={[800, 1200]}
       />
     </div>
-    
+
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
           The Future of Enterprise AI is Local
         </h2>
-        <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl">
+        <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300 bg-card/80 dark:bg-card-dark/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
           <p>
             Cloud AI is powerful, but enterprises need more control over their data and infrastructure.
           </p>
@@ -144,7 +144,7 @@ const metadata = {
 
   <!-- Why Local AI ****************** -->
 
-  <section class="py-16 md:py-24 bg-alt">
+  <section class="py-16 md:py-24">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
@@ -159,7 +159,7 @@ const metadata = {
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Left: Benefits List -->
           <div class="space-y-6">
-            <div class="flex items-start space-x-4">
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -170,8 +170,8 @@ const metadata = {
                 <p class="text-gray-600 dark:text-gray-300">Keep sensitive enterprise data inside your organization.</p>
               </div>
             </div>
-            
-            <div class="flex items-start space-x-4">
+
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -182,8 +182,8 @@ const metadata = {
                 <p class="text-gray-600 dark:text-gray-300">Immediate AI responses without cloud dependency.</p>
               </div>
             </div>
-            
-            <div class="flex items-start space-x-4">
+
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -195,8 +195,8 @@ const metadata = {
                 <p class="text-gray-600 dark:text-gray-300">Customize your AI environment for your business.</p>
               </div>
             </div>
-            
-            <div class="flex items-start space-x-4">
+
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -239,7 +239,7 @@ const metadata = {
 
   <!-- Stay Connected Section ******* -->
 
-  <section class="py-16 md:py-24 bg-alt">
+  <section class="py-16 md:py-24">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
