@@ -3,6 +3,7 @@
 ## 📝 Template Structure
 
 ```markdown
+# 基础信息
 ---
 publishDate: YYYY-MM-DD
 author: [Your Name]
