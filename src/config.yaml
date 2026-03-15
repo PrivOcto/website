@@ -39,6 +39,7 @@ metadata:
     handle: '@localai67177'
     site: '@localai67177'
     cardType: summary_large_image
+    image: '~/assets/images/local-ai-agent-edge-server-hardware.webp'
 
 i18n:
   language: en

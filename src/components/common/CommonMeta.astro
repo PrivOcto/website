@@ -1,8 +1,21 @@
 ---
-import { getAsset } from '~/utils/permalinks';
+import { getCanonical } from '~/utils/permalinks';
+import { SITE } from 'astrowind:config';
+
+// Use the favicon icon.webp as default Twitter card image
+// This is a local asset that will be processed by Astro
+const defaultImage = getCanonical('/_astro/icon.webp');
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="sitemap" href={getAsset('/sitemap-index.xml')} />
+<link rel="sitemap" href={getCanonical('/sitemap-index.xml')} />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={SITE?.metadata?.twitter?.handle || '@localai67177'} />
+<meta name="twitter:creator" content={SITE?.metadata?.twitter?.handle || '@localai67177'} />
+<meta name="twitter:title" content={SITE?.metadata?.title?.default || 'LocalAI Agent'} />
+<meta name="twitter:description" content={SITE?.metadata?.description || 'Enterprise AI Solutions'} />
+<meta name="twitter:image" content={defaultImage} />

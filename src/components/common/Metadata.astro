@@ -24,6 +24,9 @@ const {
   twitter = {},
 } = Astro.props;
 
+// Default Twitter/OpenGraph image - use Astro's processed icon
+const defaultImage = getCanonical('/_astro/icon.webp');
+
 const seoProps: AstroSeoProps = merge(
   {
     title: '',
@@ -35,12 +38,14 @@ const seoProps: AstroSeoProps = merge(
     openGraph: {
       url: canonical,
       site_name: SITE?.name,
-      images: [],
+      images: [{ url: defaultImage, width: 1200, height: 630 }],
       locale: I18N?.language || 'en',
       type: 'website',
     },
     twitter: {
-      cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
+      cardType: 'summary_large_image',
+      handle: SITE?.metadata?.twitter?.handle || '@localai67177',
+      site: SITE?.metadata?.twitter?.site || '@localai67177',
     },
   },
   {
@@ -50,7 +55,10 @@ const seoProps: AstroSeoProps = merge(
     nofollow: typeof METADATA?.robots?.follow !== 'undefined' ? !METADATA.robots.follow : undefined,
     description: METADATA?.description,
     openGraph: METADATA?.openGraph,
-    twitter: METADATA?.twitter,
+    twitter: {
+      ...METADATA?.twitter,
+      cardType: METADATA?.twitter?.cardType || 'summary_large_image',
+    },
   },
   {
     title: title,
@@ -59,8 +67,16 @@ const seoProps: AstroSeoProps = merge(
     noindex: typeof robots?.index !== 'undefined' ? !robots.index : undefined,
     nofollow: typeof robots?.follow !== 'undefined' ? !robots.follow : undefined,
     description: description,
-    openGraph: { url: canonical, ...openGraph },
-    twitter: twitter,
+    openGraph: { 
+      url: canonical,
+      ...openGraph 
+    },
+    twitter: {
+      ...twitter,
+      cardType: twitter?.cardType || 'summary_large_image',
+      handle: twitter?.handle || SITE?.metadata?.twitter?.handle || '@localai67177',
+      site: twitter?.site || SITE?.metadata?.twitter?.site || '@localai67177',
+    },
   }
 );
 ---
