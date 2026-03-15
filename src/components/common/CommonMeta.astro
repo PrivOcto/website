@@ -4,7 +4,6 @@ import { SITE } from 'astrowind:config';
 
 // Use custom Twitter card image with icon on branded background
 // Created from icon.png, sized 1200x630px for optimal Twitter display
-const defaultImage = getCanonical('/_astro/twitter-card-icon.png');
 ---
 
 <meta charset="UTF-8" />
@@ -18,4 +17,4 @@ const defaultImage = getCanonical('/_astro/twitter-card-icon.png');
 <meta name="twitter:creator" content={SITE?.metadata?.twitter?.handle || '@localai67177'} />
 <meta name="twitter:title" content={SITE?.metadata?.title?.default || 'LocalAI Agent'} />
 <meta name="twitter:description" content={SITE?.metadata?.description || 'Enterprise AI Solutions'} />
-<meta name="twitter:image" content={defaultImage} />
+<meta name="twitter:image" content='~/src/assets/favicons/icon.png' />
