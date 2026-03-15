@@ -1,8 +1,8 @@
 ---
 publishDate: 2026-03-15
 author: Jiahao
-title: "MCP vs. Function Calling: Why the Model Context Protocol is the New Standard for AI Agents"
-excerpt: "Tired of brittle tool integrations? Explore how Model Context Protocol (MCP) surpasses standard Function Calling to provide a scalable, secure, and vendor-agnostic architecture for AI agents."
+title: "MCP vs Function Calling: AI Tool Integration Guide"
+excerpt: "Learn how MCP provides scalable, secure AI tool integration compared to traditional Function Calling."
 image: "~/assets/images/blog/mcp-vs-function-calling.webp"
 category: AI Engineering
 

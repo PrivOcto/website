@@ -1,5 +1,5 @@
 ---
-title: 'Privacy Policy'
+title: 'Privacy Policy - LocalAI Agent Data Protection'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 

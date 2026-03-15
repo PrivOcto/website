@@ -24,7 +24,8 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `LocalAI Agent Blog - Enterprise AI Insights & Tutorials${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
+  description: 'Read the latest articles about local AI deployment, enterprise AI infrastructure, LLM inference optimization, and AI agent development.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,

@@ -1,5 +1,5 @@
 ---
-title: 'Terms of Service'
+title: 'Terms of Service - LocalAI Agent Usage Agreement'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 

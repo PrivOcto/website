@@ -1,8 +1,8 @@
 ---
 publishDate: 2026-03-15
 author: Jiahao
-title: "vLLM vs SGLang: The Ultimate Enterprise Inference Guide"
-excerpt: "Compare vLLM and SGLang for enterprise AI. Discover which high-throughput inference engine optimizes your LLM deployment for cost and performance."
+title: "vLLM vs SGLang: Enterprise LLM Inference Comparison"
+excerpt: "Compare vLLM and SGLang for enterprise AI deployment and performance."
 image: "~/assets/images/blog/vllm-vs-sglang.webp"
 category: AI Infrastructure
 keywords:
