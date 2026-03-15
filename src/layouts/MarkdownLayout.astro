@@ -7,8 +7,10 @@ export interface Props {
   frontmatter: {
     title?: string;
     publishDate?: string | Date;
+    updateDate?: string | Date;
     author?: string;
     readingTime?: number;
+    excerpt?: string;
   };
 }
 
@@ -31,67 +33,88 @@ function formatDate(date: string | Date | undefined): string {
 
 <Layout metadata={metadata}>
   <article class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-blog-prose bg-card">
-    <!-- Blog Header -->
+    <!-- Blog Header - Medium Style -->
     <header class="mb-12">
-      <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter text-text-primary">
+      <!-- Category label (optional - Medium style) -->
+      {frontmatter.category && (
+        <div class="text-blog-small font-semibold text-accent uppercase tracking-wide mb-4">
+          {frontmatter.category}
+        </div>
+      )}
+      
+      <!-- Title -->
+      <h1 class="font-bold font-heading text-blog-title leading-tight tracking-tight text-text-primary">
         {frontmatter.title}
       </h1>
       
-      <!-- Meta Information -->
+      <!-- Excerpt (optional - Medium style subtitle) -->
+      {frontmatter.excerpt && (
+        <p class="text-xl text-text-secondary mt-6 leading-relaxed">
+          {frontmatter.excerpt}
+        </p>
+      )}
+      
+      <!-- Meta Information - Medium Style -->
       {(frontmatter.publishDate || frontmatter.author || frontmatter.readingTime) && (
-        <div class="flex flex-wrap items-center gap-4 mt-6 text-blog-small text-text-secondary">
+        <div class="flex flex-wrap items-center gap-3 mt-8 text-blog-small text-text-secondary">
           {frontmatter.publishDate && (
-            <time datetime={String(frontmatter.publishDate)}>
+            <time datetime={String(frontmatter.publishDate)} class="font-medium">
               {formatDate(frontmatter.publishDate)}
             </time>
           )}
-          {frontmatter.publishDate && frontmatter.author && <span>•</span>}
-          {frontmatter.author && (
-            <span>{frontmatter.author}</span>
+          {frontmatter.publishDate && frontmatter.author && (
+            <span class="text-text-light">•</span>
           )}
-          {(frontmatter.publishDate || frontmatter.author) && frontmatter.readingTime && <span>•</span>}
+          {frontmatter.author && (
+            <span class="font-medium text-text-primary">{frontmatter.author}</span>
+          )}
+          {(frontmatter.publishDate || frontmatter.author) && frontmatter.readingTime && (
+            <span class="text-text-light">•</span>
+          )}
           {frontmatter.readingTime && (
-            <span>{frontmatter.readingTime} min read</span>
+            <span class="font-medium">{frontmatter.readingTime} min read</span>
+          )}
+          {frontmatter.updateDate && (
+            <>
+              <span class="text-text-light">•</span>
+              <span class="text-text-light">Updated {formatDate(frontmatter.updateDate)}</span>
+            </>
           )}
         </div>
       )}
     </header>
     
-    <!-- Blog Content -->
+    <!-- Blog Content - Medium Style Typography -->
     <div
-      class="mx-auto prose prose-blog max-w-blog-content dark:prose-invert 
-             prose-headings:font-heading 
-             prose-headings:font-bold 
-             prose-headings:tracking-tight
-             prose-h2:mt-12 
-             prose-h2:mb-4
-             prose-h3:mt-8 
-             prose-h3:mb-3
-             prose-p:mb-6
-             prose-a:text-accent 
-             prose-a:no-underline
-             prose-a:hover:text-primary
-             prose-img:rounded-lg 
-             prose-img:shadow-md
-             prose-table:block
-             prose-table:overflow-x-auto
-             prose-thead:border-border
-             prose-th:border-border
-             prose-td:border-border
-             prose-pre:bg-code-bg
-             prose-pre:rounded-lg
-             prose-pre:p-6
-             prose-code:bg-code-bg
-             prose-code:px-2
-             prose-code:py-1
-             prose-code:rounded
-             prose-blockquote:border-l-4
-             prose-blockquote:border-accent
-             prose-blockquote:pl-6
-             prose-blockquote:italic
-             prose-blockquote:text-text-secondary"
+      class="mx-auto prose prose-blog max-w-blog-content dark:prose-invert"
     >
       <slot />
     </div>
+    
+    <!-- Article Footer - Medium Style -->
+    <footer class="mt-16 pt-8 border-t border-border">
+      <!-- Tags -->
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-6">
+          {frontmatter.tags.map((tag: string) => (
+            <span
+              class="px-3 py-1 text-blog-small bg-code-bg text-text-secondary rounded-full hover:bg-border transition-colors cursor-pointer"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      
+      <!-- Share section (placeholder) -->
+      <div class="flex items-center justify-between">
+        <p class="text-blog-small text-text-secondary">
+          Share this article
+        </p>
+        <div class="flex gap-3">
+          <!-- Social share buttons would go here -->
+        </div>
+      </div>
+    </footer>
   </article>
 </Layout>

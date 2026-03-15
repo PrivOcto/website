@@ -2,37 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Blog Typography CSS Custom Properties */
+/* Medium-Style Blog Typography CSS Custom Properties */
 :root {
-  /* Blog Text Colors - Light Mode */
-  --aw-color-text-primary: #1a202c;
-  --aw-color-text-secondary: #4a5568;
+  /* Blog Text Colors - Light Mode (Medium-inspired) */
+  --aw-color-text-primary: #242424; /* Medium's near-black for primary text */
+  --aw-color-text-secondary: #6b6b6b; /* Medium's gray for secondary text */
+  --aw-color-text-light: #9b9b9b; /* Light gray for captions */
   --aw-color-text-muted: #718096;
-  --aw-color-accent: #3b82f6;
-  --aw-color-border: #e2e8f0;
-  --aw-color-code-bg: #f7fafc;
+  --aw-color-accent: #1a8917; /* Medium's signature green for links */
+  --aw-color-border: #e6e6e6; /* Light border color */
+  --aw-color-code-bg: #f7f7f7; /* Medium's code background */
   
   /* Blog Background Colors - Light Mode */
   --aw-color-bg-page: #ffffff;
   --aw-color-bg-card: #ffffff;
   
-  /* Blog Font Families */
-  --aw-font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
-  --aw-font-heading: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  /* Blog Font Families - Medium uses Charter for serif, sans for UI */
+  --aw-font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --aw-font-heading: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --aw-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 }
 
-/* Dark Mode Blog Colors */
+/* Dark Mode Blog Colors (Medium-style dark theme) */
 .dark {
-  --aw-color-text-primary: #f0f6fc;
-  --aw-color-text-secondary: #8b949e;
+  --aw-color-text-primary: #f9f9f9; /* Near-white for dark mode */
+  --aw-color-text-secondary: #a3a3a3; /* Medium gray */
+  --aw-color-text-light: #6b6b6b; /* Dark gray for captions */
   --aw-color-text-muted: #6e7681;
-  --aw-color-accent: #58a6ff;
-  --aw-color-border: #30363d;
-  --aw-color-code-bg: #21262d;
+  --aw-color-accent: #4ade80; /* Brighter green for dark mode */
+  --aw-color-border: #3d3d3d; /* Darker border */
+  --aw-color-code-bg: #1e1e1e; /* Dark code background */
   
-  --aw-color-bg-page: #0d1117;
-  --aw-color-bg-card: #161b22;
+  --aw-color-bg-page: #0a0a0a; /* Near-black background */
+  --aw-color-bg-card: #141414; /* Slightly lighter card */
 }
 
 @layer utilities {
@@ -80,6 +82,9 @@
   }
   .text-secondary {
     color: var(--aw-color-text-secondary);
+  }
+  .text-light {
+    color: var(--aw-color-text-light);
   }
   .glow-primary {
     background-image: var(--aw-glow-primary);
