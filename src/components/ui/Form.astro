@@ -8,7 +8,7 @@ const {
   disclaimer, 
   button = 'Contact us', 
   description = '',
-  formAction = '' // Formspree URL
+  formAction = import.meta.env.FORMSPREE_ENDPOINT // Formspree URL from environment variable
 } = Astro.props;
 ---
 
