@@ -2,7 +2,7 @@ import { getRssString } from '@astrojs/rss';
 
 import { SITE, METADATA, APP_BLOG } from 'astrowind:config';
 import { fetchPosts } from '~/utils/blog';
-import { getPermalink } from '~/utils/permalinks';
+import { getPermalink, getAsset } from '~/utils/permalinks';
 
 export const GET = async () => {
   if (!APP_BLOG.isEnabled) {
@@ -27,7 +27,7 @@ export const GET = async () => {
       pubDate: post.publishDate,
       categories: post.tags?.map((tag) => tag.title) || [],
       author: post.author,
-      customData: post.image ? `<enclosure url="${new URL(post.image, import.meta.env.SITE).href}" type="image/webp" />` : undefined,
+      customData: post.image ? `<enclosure url="${getAsset(post.image)}" type="image/webp" />` : undefined,
     })),
 
     trailingSlash: SITE.trailingSlash,
