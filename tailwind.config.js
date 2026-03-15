@@ -12,47 +12,48 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
-        // Medium-style blog typography colors
-        'text-primary': 'var(--aw-color-text-primary)',
+        // Blog typography colors
+        'text-body': 'var(--aw-color-text-body)',
+        'text-heading': 'var(--aw-color-text-heading)',
         'text-secondary': 'var(--aw-color-text-secondary)',
         'text-light': 'var(--aw-color-text-light)',
         'code-bg': 'var(--aw-color-code-bg)',
         border: 'var(--aw-color-border)',
       },
       fontFamily: {
-        sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
-        serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
-        heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
-        mono: ['var(--aw-font-mono, ui-monospace)', ...defaultTheme.fontFamily.mono],
+        sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
+        heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
+        mono: ['var(--aw-font-mono)', ...defaultTheme.fontFamily.mono],
       },
       fontSize: {
-        // Medium-style blog typography sizes
-        // Based on Medium's typography system
-        'blog-title': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }], // 40px - H1
-        'blog-h2': ['1.875rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }], // 30px
-        'blog-h3': ['1.4375rem', { lineHeight: '1.4', fontWeight: '700' }], // 23px - Medium uses bold H3
-        'blog-body': ['1.25rem', { lineHeight: '1.6' }], // 20px - Medium's signature large body text
-        'blog-small': ['0.9375rem', { lineHeight: '1.5' }], // 15px - Meta text
-        'blog-code': ['0.875rem', { lineHeight: '1.7' }], // 14px - Code blocks
-        'blog-caption': ['0.875rem', { lineHeight: '1.4', color: 'var(--aw-color-text-light)' }], // 14px - Image captions
+        // Blog typography sizes - User specifications
+        'blog-body': ['16px', { lineHeight: '1.6', letterSpacing: '0.5px' }],
+        'blog-h1': ['36px', { lineHeight: '1.2', letterSpacing: '0.75px' }],
+        'blog-h2': ['28px', { lineHeight: '1.25', letterSpacing: '0.75px' }],
+        'blog-h3': ['22px', { lineHeight: '1.3', letterSpacing: '0.75px' }],
+        'blog-h4': ['20px', { lineHeight: '1.35', letterSpacing: '0.75px' }],
+        'blog-h5': ['18px', { lineHeight: '1.4', letterSpacing: '0.75px' }],
+        'blog-h6': ['16px', { lineHeight: '1.4', letterSpacing: '0.75px' }],
+        'blog-code': ['15px', { lineHeight: '1.5', letterSpacing: '0px' }],
+        'blog-small': ['14px', { lineHeight: '1.5' }],
       },
       fontWeight: {
-        'medium': '500',
-        'semibold': '600',
-        'bold': '700',
+        'body': '400',
+        'h1': '700',
+        'h2': '600',
+        'h3': '600',
+        'h4': '500',
+        'h5': '500',
+        'h6': '500',
       },
       maxWidth: {
-        'blog-content': '700px', // Medium's optimal content width
-        'blog-prose': '4xl', // 896px - Container max
+        'blog-content': '700px',
+        'blog-prose': '4xl',
       },
-      lineHeight: {
-        'blog-tight': '1.2',
-        'blog-normal': '1.6',
-        'blog-relaxed': '1.75',
-      },
-      letterSpacing: {
-        'blog-tight': '-0.02em',
-        'blog-normal': '-0.01em',
+      spacing: {
+        'paragraph': '16px',
+        'heading': '24px',
+        'section': '48px',
       },
 
       animation: {
@@ -65,13 +66,6 @@ export default {
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
-
-      // Medium-style spacing
-      spacing: {
-        'section': '3.5rem', // 56px between major sections
-        'paragraph': '1.75rem', // 28px between paragraphs (Medium uses generous spacing)
-        'meta': '1rem', // 16px for meta information
-      },
     },
   },
   plugins: [
@@ -79,7 +73,7 @@ export default {
     plugin(({ addVariant, addUtilities, theme }) => {
       addVariant('intersect', '&:not([no-intersect])');
       
-      // Medium-style blog typography utilities
+      // Blog typography utilities
       addUtilities({
         '.prose-blog': {
           '&': {
@@ -87,51 +81,68 @@ export default {
             margin: '0 auto',
             fontFamily: theme('fontFamily.sans'),
           },
-          // H1 - Title
+          // H1 - Uppercase
           '& h1': {
-            fontSize: theme('fontSize.blog-title')[0],
-            lineHeight: theme('lineHeight.blog-tight'),
+            fontSize: theme('fontSize.blog-h1')[0],
+            lineHeight: '1.2',
             fontWeight: '700',
-            letterSpacing: theme('letterSpacing.blog-tight'),
-            marginBottom: theme('spacing.8'),
-            color: 'var(--aw-color-text-primary)',
+            letterSpacing: '0.75px',
+            marginBottom: theme('spacing.heading'),
+            color: 'var(--aw-color-text-heading)',
+            textTransform: 'uppercase',
           },
-          // H2 - Major sections
+          // H2 - Uppercase
           '& h2': {
             fontSize: theme('fontSize.blog-h2')[0],
-            lineHeight: theme('lineHeight.blog-tight'),
-            fontWeight: '700',
-            letterSpacing: theme('letterSpacing.blog-normal'),
+            lineHeight: '1.25',
+            fontWeight: '600',
+            letterSpacing: '0.75px',
             marginTop: theme('spacing.section'),
-            marginBottom: theme('spacing.5'),
-            color: 'var(--aw-color-text-primary)',
+            marginBottom: theme('spacing.heading'),
+            color: 'var(--aw-color-text-heading)',
+            textTransform: 'uppercase',
           },
-          // H3 - Subsections (Medium style: bold, prominent)
+          // H3-H6 - Title Case
           '& h3': {
             fontSize: theme('fontSize.blog-h3')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
-            fontWeight: '700',
-            marginTop: theme('spacing.10'),
-            marginBottom: theme('spacing.4'),
-            color: 'var(--aw-color-text-primary)',
-          },
-          // H4 - Minor headings
-          '& h4': {
-            fontSize: theme('fontSize.lg')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
+            lineHeight: '1.3',
             fontWeight: '600',
-            marginTop: theme('spacing.8'),
-            marginBottom: theme('spacing.3'),
-            color: 'var(--aw-color-text-primary)',
+            letterSpacing: '0.75px',
+            marginTop: theme('spacing.section'),
+            marginBottom: theme('spacing.heading'),
+            color: 'var(--aw-color-text-heading)',
           },
-          // Body paragraphs - Medium's signature large, readable text
+          '& h4': {
+            fontSize: theme('fontSize.blog-h4')[0],
+            lineHeight: '1.35',
+            fontWeight: '500',
+            marginTop: theme('spacing.6'),
+            marginBottom: theme('spacing.4'),
+            color: 'var(--aw-color-text-heading)',
+          },
+          '& h5': {
+            fontSize: theme('fontSize.blog-h5')[0],
+            lineHeight: '1.4',
+            fontWeight: '500',
+            marginTop: theme('spacing.5'),
+            marginBottom: theme('spacing.3'),
+            color: 'var(--aw-color-text-heading)',
+          },
+          '& h6': {
+            fontSize: theme('fontSize.blog-h6')[0],
+            lineHeight: '1.4',
+            fontWeight: '500',
+            marginTop: theme('spacing.5'),
+            marginBottom: theme('spacing.3'),
+            color: 'var(--aw-color-text-heading)',
+          },
+          // Body paragraphs
           '& p': {
             fontSize: theme('fontSize.blog-body')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
+            lineHeight: '1.6',
+            letterSpacing: '0.5px',
             marginBottom: theme('spacing.paragraph'),
-            color: 'var(--aw-color-text-primary)',
-            // Medium uses justified text on some views
-            textAlign: 'left',
+            color: 'var(--aw-color-text-body)',
           },
           // Lists
           '& ul, & ol': {
@@ -140,62 +151,53 @@ export default {
           },
           '& li': {
             fontSize: theme('fontSize.blog-body')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
-            marginBottom: theme('spacing.3'),
-            // Medium uses bullet points with generous spacing
+            lineHeight: '1.6',
+            marginBottom: theme('spacing.2'),
           },
-          '& li > ul, & li > ol': {
-            marginTop: theme('spacing.3'),
-            marginBottom: '0',
-          },
-          // Blockquotes - Medium style with left border
+          // Blockquotes
           '& blockquote': {
-            borderLeftWidth: '3px',
-            borderLeftColor: 'var(--aw-color-accent)',
-            paddingLeft: theme('spacing.6'),
-            margin: `${theme('spacing.10')} 0`,
+            borderLeftWidth: '4px',
+            borderLeftColor: 'var(--aw-color-border)',
+            paddingLeft: '16px',
+            margin: '16px 0',
             fontStyle: 'italic',
-            color: 'var(--aw-color-text-secondary)',
+            color: 'var(--aw-color-blockquote)',
           },
           '& blockquote p': {
             fontSize: theme('fontSize.blog-body')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
-            marginBottom: theme('spacing.4'),
+            lineHeight: '1.6',
+            marginBottom: '0',
           },
-          // Code blocks - Medium style
+          // Code blocks
           '& pre': {
             backgroundColor: theme('colors.code-bg'),
-            borderRadius: theme('borderRadius.lg'),
-            padding: theme('spacing.6'),
-            margin: `${theme('spacing.8')} 0`,
+            borderRadius: '8px',
+            padding: '12px 16px',
+            margin: `${theme('spacing.6')} 0`,
             fontFamily: theme('fontFamily.mono'),
             fontSize: theme('fontSize.blog-code')[0],
-            lineHeight: theme('lineHeight.blog-relaxed'),
-            overflowX: 'auto',
-            // Medium uses subtle shadows
-            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
+            lineHeight: '1.5',
+            overflow: 'auto',
           },
           // Inline code
           '& code': {
             fontFamily: theme('fontFamily.mono'),
-            fontSize: '0.9em',
+            fontSize: theme('fontSize.blog-code')[0],
             backgroundColor: theme('colors.code-bg'),
-            padding: '0.2em 0.4em',
-            borderRadius: theme('borderRadius.md'),
-            fontWeight: '500',
+            padding: '2px 6px',
+            borderRadius: '4px',
           },
           '& pre code': {
             backgroundColor: 'transparent',
             padding: '0',
             fontSize: 'inherit',
           },
-          // Tables - Medium style
+          // Tables
           '& table': {
             width: '100%',
-            margin: `${theme('spacing.8')} 0`,
+            margin: `${theme('spacing.6')} 0`,
             borderCollapse: 'collapse',
             fontSize: theme('fontSize.blog-body')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
           },
           '& th': {
             backgroundColor: theme('colors.code-bg'),
@@ -204,76 +206,33 @@ export default {
             padding: `${theme('spacing.3')} ${theme('spacing.4')}`,
             borderWidth: '1px',
             borderColor: theme('colors.border'),
-            borderBottomWidth: '2px',
           },
           '& td': {
             padding: `${theme('spacing.3')} ${theme('spacing.4')}`,
             borderWidth: '1px',
             borderColor: theme('colors.border'),
-            lineHeight: theme('lineHeight.blog-normal'),
           },
-          '& tr:nth-child(even)': {
-            backgroundColor: theme('colors.code-bg'),
-          },
-          // Images - Medium style
+          // Images
           '& img': {
-            borderRadius: theme('borderRadius.none'), // Medium uses square corners
+            borderRadius: theme('borderRadius.lg'),
             margin: `${theme('spacing.8')} 0`,
             maxWidth: '100%',
             height: 'auto',
-            // Medium adds subtle shadows
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
           },
-          '& figure': {
-            margin: `${theme('spacing.8')} 0`,
-          },
-          // Image captions - Medium style
-          '& figcaption': {
-            fontSize: theme('fontSize.blog-caption')[0],
-            lineHeight: theme('lineHeight.blog-normal'),
-            color: 'var(--aw-color-text-light)',
-            marginTop: theme('spacing.3'),
-            textAlign: 'left',
-          },
-          // Links - Medium style
+          // Links
           '& a': {
-            color: 'var(--aw-color-accent)',
+            color: 'var(--aw-color-text-link)',
             textDecoration: 'underline',
-            textUnderlineOffset: '3px',
-            transition: 'color 0.15s ease',
-            fontWeight: '500',
+            textUnderlineOffset: '2px',
+            transition: 'color 0.2s',
           },
           '& a:hover': {
-            color: 'var(--aw-color-primary)',
-            textDecorationColor: 'var(--aw-color-primary)',
-          },
-          // Horizontal rules
-          '& hr': {
-            margin: `${theme('spacing.12')} 0`,
-            borderColor: theme('colors.border'),
-            borderWidth: '1px 0 0 0',
-          },
-          // Strong/Bold text
-          '& strong': {
-            fontWeight: '700',
-            color: 'var(--aw-color-text-primary)',
-          },
-          // Emphasis
-          '& em': {
-            fontStyle: 'italic',
+            color: 'var(--aw-color-accent)',
           },
         },
         
-        // Meta information styling (date, author, reading time)
+        // Meta information
         '.blog-meta': {
-          fontSize: theme('fontSize.blog-small')[0],
-          lineHeight: theme('lineHeight.blog-normal'),
-          color: 'var(--aw-color-text-secondary)',
-          fontWeight: '500',
-        },
-        
-        // Author byline
-        '.blog-author': {
           fontSize: theme('fontSize.blog-small')[0],
           color: 'var(--aw-color-text-secondary)',
         },

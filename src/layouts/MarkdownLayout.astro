@@ -11,6 +11,8 @@ export interface Props {
     author?: string;
     readingTime?: number;
     excerpt?: string;
+    category?: string;
+    tags?: string[];
   };
 }
 
@@ -33,9 +35,9 @@ function formatDate(date: string | Date | undefined): string {
 
 <Layout metadata={metadata}>
   <article class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-blog-prose bg-card">
-    <!-- Blog Header - Medium Style -->
+    <!-- Blog Header -->
     <header class="mb-12">
-      <!-- Category label (optional - Medium style) -->
+      <!-- Category label -->
       {frontmatter.category && (
         <div class="text-blog-small font-semibold text-accent uppercase tracking-wide mb-4">
           {frontmatter.category}
@@ -43,18 +45,18 @@ function formatDate(date: string | Date | undefined): string {
       )}
       
       <!-- Title -->
-      <h1 class="font-bold font-heading text-blog-title leading-tight tracking-tight text-text-primary">
+      <h1 class="font-bold font-heading text-blog-title leading-tight text-text-heading">
         {frontmatter.title}
       </h1>
       
-      <!-- Excerpt (optional - Medium style subtitle) -->
+      <!-- Excerpt -->
       {frontmatter.excerpt && (
         <p class="text-xl text-text-secondary mt-6 leading-relaxed">
           {frontmatter.excerpt}
         </p>
       )}
       
-      <!-- Meta Information - Medium Style -->
+      <!-- Meta Information -->
       {(frontmatter.publishDate || frontmatter.author || frontmatter.readingTime) && (
         <div class="flex flex-wrap items-center gap-3 mt-8 text-blog-small text-text-secondary">
           {frontmatter.publishDate && (
@@ -66,7 +68,7 @@ function formatDate(date: string | Date | undefined): string {
             <span class="text-text-light">•</span>
           )}
           {frontmatter.author && (
-            <span class="font-medium text-text-primary">{frontmatter.author}</span>
+            <span class="font-medium text-text-heading">{frontmatter.author}</span>
           )}
           {(frontmatter.publishDate || frontmatter.author) && frontmatter.readingTime && (
             <span class="text-text-light">•</span>
@@ -84,14 +86,14 @@ function formatDate(date: string | Date | undefined): string {
       )}
     </header>
     
-    <!-- Blog Content - Medium Style Typography -->
+    <!-- Blog Content -->
     <div
       class="mx-auto prose prose-blog max-w-blog-content dark:prose-invert"
     >
       <slot />
     </div>
     
-    <!-- Article Footer - Medium Style -->
+    <!-- Article Footer -->
     <footer class="mt-16 pt-8 border-t border-border">
       <!-- Tags -->
       {frontmatter.tags && frontmatter.tags.length > 0 && (
@@ -106,13 +108,13 @@ function formatDate(date: string | Date | undefined): string {
         </div>
       )}
       
-      <!-- Share section (placeholder) -->
+      <!-- Share section -->
       <div class="flex items-center justify-between">
         <p class="text-blog-small text-text-secondary">
           Share this article
         </p>
         <div class="flex gap-3">
-          <!-- Social share buttons would go here -->
+          <!-- Social share buttons placeholder -->
         </div>
       </div>
     </footer>

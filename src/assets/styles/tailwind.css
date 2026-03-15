@@ -2,39 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Medium-Style Blog Typography CSS Custom Properties */
+/* Blog Typography CSS Custom Properties - Based on User Specifications */
 :root {
-  /* Blog Text Colors - Light Mode (Medium-inspired) */
-  --aw-color-text-primary: #242424; /* Medium's near-black for primary text */
-  --aw-color-text-secondary: #6b6b6b; /* Medium's gray for secondary text */
-  --aw-color-text-light: #9b9b9b; /* Light gray for captions */
-  --aw-color-text-muted: #718096;
-  --aw-color-accent: #1a8917; /* Medium's signature green for links */
-  --aw-color-border: #e6e6e6; /* Light border color */
-  --aw-color-code-bg: #f7f7f7; /* Medium's code background */
+  /* Font Families */
+  --aw-font-sans: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --aw-font-heading: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --aw-font-mono: 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
   
-  /* Blog Background Colors - Light Mode */
+  /* Font Sizes */
+  --aw-font-size-body: 16px;
+  --aw-font-size-h1: 36px;
+  --aw-font-size-h2: 28px;
+  --aw-font-size-h3: 22px;
+  --aw-font-size-h4: 20px;
+  --aw-font-size-h5: 18px;
+  --aw-font-size-h6: 16px;
+  --aw-font-size-code: 15px;
+  
+  /* Line Heights */
+  --aw-line-height-body: 1.6;
+  --aw-line-height-h1: 1.2;
+  --aw-line-height-h2: 1.25;
+  --aw-line-height-h3: 1.3;
+  --aw-line-height-h4: 1.35;
+  --aw-line-height-h5: 1.4;
+  --aw-line-height-h6: 1.4;
+  --aw-line-height-code: 1.5;
+  
+  /* Letter Spacing */
+  --aw-letter-spacing-body: 0.5px;
+  --aw-letter-spacing-heading: 0.75px;
+  --aw-letter-spacing-code: 0px;
+  
+  /* Spacing */
+  --aw-paragraph-spacing-body: 16px;
+  --aw-paragraph-spacing-heading: 24px;
+  
+  /* Font Weights */
+  --aw-font-weight-body: 400;
+  --aw-font-weight-h1: 700;
+  --aw-font-weight-h2: 600;
+  --aw-font-weight-h3: 600;
+  --aw-font-weight-h4: 500;
+  --aw-font-weight-h5: 500;
+  --aw-font-weight-h6: 500;
+  --aw-font-weight-code: 400;
+  
+  /* Colors - Light Mode */
+  --aw-color-text-body: #1a1a1a;
+  --aw-color-text-heading: #111111;
+  --aw-color-text-link: #1e88e5;
+  --aw-color-text-secondary: #6b6b6b;
+  --aw-color-text-light: #9b9b9b;
+  --aw-color-text-muted: #718096;
+  --aw-color-code-bg: #f5f5f5;
+  --aw-color-blockquote: #555555;
+  --aw-color-border: #d0d0d0;
+  --aw-color-accent: #1e88e5;
   --aw-color-bg-page: #ffffff;
   --aw-color-bg-card: #ffffff;
-  
-  /* Blog Font Families - Medium uses Charter for serif, sans for UI */
-  --aw-font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --aw-font-heading: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --aw-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 }
 
-/* Dark Mode Blog Colors (Medium-style dark theme) */
+/* Dark Mode */
 .dark {
-  --aw-color-text-primary: #f9f9f9; /* Near-white for dark mode */
-  --aw-color-text-secondary: #a3a3a3; /* Medium gray */
-  --aw-color-text-light: #6b6b6b; /* Dark gray for captions */
+  --aw-color-text-body: #e0e0e0;
+  --aw-color-text-heading: #ffffff;
+  --aw-color-text-link: #64b5f6;
+  --aw-color-text-secondary: #a0a0a0;
+  --aw-color-text-light: #707070;
   --aw-color-text-muted: #6e7681;
-  --aw-color-accent: #4ade80; /* Brighter green for dark mode */
-  --aw-color-border: #3d3d3d; /* Darker border */
-  --aw-color-code-bg: #1e1e1e; /* Dark code background */
-  
-  --aw-color-bg-page: #0a0a0a; /* Near-black background */
-  --aw-color-bg-card: #141414; /* Slightly lighter card */
+  --aw-color-code-bg: #1e1e1e;
+  --aw-color-blockquote: #a0a0a0;
+  --aw-color-border: #404040;
+  --aw-color-accent: #64b5f6;
+  --aw-color-bg-page: #0a0a0a;
+  --aw-color-bg-card: #141414;
 }
 
 @layer utilities {
@@ -78,13 +120,19 @@
     color: var(--aw-color-text-muted);
   }
   .text-primary {
-    color: var(--aw-color-text-primary);
+    color: var(--aw-color-text-body);
   }
   .text-secondary {
     color: var(--aw-color-text-secondary);
   }
   .text-light {
     color: var(--aw-color-text-light);
+  }
+  .text-body {
+    color: var(--aw-color-text-body);
+  }
+  .text-heading {
+    color: var(--aw-color-text-heading);
   }
   .glow-primary {
     background-image: var(--aw-glow-primary);
