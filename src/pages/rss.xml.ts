@@ -15,7 +15,8 @@ export const GET = async () => {
   const posts = await fetchPosts();
 
   const rss = await getRssString({
-    title: `${SITE.name}’s Blog`,
+    title: `${SITE.name} Blog`,
+    subtitle: METADATA?.description || 'Enterprise Local AI Infrastructure & AI Agents',
     description: METADATA?.description || '',
     site: import.meta.env.SITE,
 
@@ -24,6 +25,9 @@ export const GET = async () => {
       title: post.title,
       description: post.excerpt,
       pubDate: post.publishDate,
+      categories: post.tags?.map((tag) => tag.title) || [],
+      author: post.author,
+      customData: post.image ? `<enclosure url="${new URL(post.image, import.meta.env.SITE).href}" type="image/webp" />` : undefined,
     })),
 
     trailingSlash: SITE.trailingSlash,
