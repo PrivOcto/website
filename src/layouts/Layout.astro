@@ -10,6 +10,9 @@ import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 
+// Comment the line below to disable View Transitions
+import { ClientRouter } from 'astro:transitions';
+
 import type { MetaData as MetaDataType } from '~/types';
 
 // Import CSS for bundling - Astro will handle the asset URL
@@ -55,9 +58,8 @@ const { language, textDirection } = I18N;
     <link rel="preload" href={tailwindCSS} as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href={tailwindCSS} /></noscript>
 
-    <!-- View Transitions - loaded after critical content -->
-    <meta name="astro-view-transitions-enabled" content="true" />
-    <meta name="astro-view-transitions-fallback" content="swap" />
+    <!-- Comment the line below to disable View Transitions -->
+    <ClientRouter fallback="swap" />
   </head>
 
   <body class="antialiased text-default bg-page dark:bg-dark tracking-tight min-h-screen">
@@ -65,8 +67,5 @@ const { language, textDirection } = I18N;
 
     <BasicScripts />
     <Analytics />
-    
-    <!-- Load ClientRouter after page content for non-blocking execution -->
-    <script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DZnDNxNb.js" async></script>
   </body>
 </html>
