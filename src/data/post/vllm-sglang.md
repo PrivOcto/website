@@ -27,7 +27,8 @@ metadata:
 ---
 # vLLM vs SGLang: Enterprise LLM Inference Comparison
 
-> **TL;DR:** vLLM uses PagedAttention for high-throughput general inference; SGLang uses RadixAttention for complex multi-turn agents with 30-50% prefix caching savings. Choose vLLM for stability, SGLang for RAG and agentic workflows. [Jump to comparison table →](#comparison-table-vllm-vs-sglang)
+## Key Takeaways
+vLLM uses PagedAttention for high-throughput general inference; SGLang uses RadixAttention for complex multi-turn agents with 30-50% prefix caching savings. Choose vLLM for stability, SGLang for RAG and agentic workflows.
 
 ## Introduction
 > In the race for enterprise AI dominance, the bottleneck is no longer just model intelligence, but the efficiency and latency of the inference stack powering it.
