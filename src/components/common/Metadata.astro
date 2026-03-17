@@ -27,6 +27,32 @@ const {
 // Default Twitter/OpenGraph image - use Astro's processed icon
 const defaultImage = getCanonical('/_astro/icon.webp');
 
+// Helper function to adapt Twitter images (similar to OpenGraph)
+async function adaptTwitterImages(twitterOpenGraph: typeof openGraph = {}, site?: URL) {
+  if (!site) return twitterOpenGraph;
+  if (!twitterOpenGraph?.images?.length) return twitterOpenGraph;
+
+  const images = twitterOpenGraph.images.map((image) => {
+    if (typeof image === 'string') {
+      try {
+        return new URL(image, site).toString();
+      } catch {
+        return image;
+      }
+    }
+    if (typeof image.url === 'string') {
+      try {
+        return { ...image, url: new URL(image.url, site).toString() };
+      } catch {
+        return image;
+      }
+    }
+    return image;
+  });
+
+  return { ...twitterOpenGraph, images };
+}
+
 const seoProps: AstroSeoProps = merge(
   {
     title: '',
@@ -67,18 +93,19 @@ const seoProps: AstroSeoProps = merge(
     noindex: typeof robots?.index !== 'undefined' ? !robots.index : undefined,
     nofollow: typeof robots?.follow !== 'undefined' ? !robots.follow : undefined,
     description: description,
-    openGraph: { 
+    openGraph: {
       url: canonical,
-      ...openGraph 
+      ...openGraph
     },
     twitter: {
       ...twitter,
       cardType: twitter?.cardType || 'summary_large_image',
       handle: twitter?.handle || SITE?.metadata?.twitter?.handle || '@localai67177',
       site: twitter?.site || SITE?.metadata?.twitter?.site || '@localai67177',
+      image: twitter?.image || openGraph?.images?.[0]?.url || defaultImage,
     },
   }
 );
 ---
 
-<AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
+<AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site), twitter: await adaptTwitterImages(seoProps?.twitter, Astro.site) }} />
