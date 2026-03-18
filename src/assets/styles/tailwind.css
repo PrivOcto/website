@@ -159,6 +159,37 @@ img:not([src]), img[src=""] {
   margin: 1.5em 0;
 }
 
+/* 15. Prevent CLS from absolute positioned background images */
+.absolute img {
+  contain: layout;
+}
+
+/* 16. Sticky header CLS prevention */
+header[style*="position: sticky"],
+header[style*="position:fixed"] {
+  contain: layout;
+}
+
+/* 17. Ensure all sections have defined min-height during load */
+section.relative {
+  min-height: 100vh;
+}
+
+section.relative:first-of-type {
+  min-height: auto;
+}
+
+/* 18. Prevent layout shift in grid layouts */
+.grid {
+  contain: layout;
+}
+
+/* 19. Logo image CLS prevention */
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
 /* Blog Typography CSS Custom Properties - Based on User Specifications */
 :root {
   /* Font Families */

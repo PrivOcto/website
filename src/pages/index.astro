@@ -120,6 +120,9 @@ const faqs = [
             widths={[400, 600, 800]}
             fetchpriority="high"
             loading="eager"
+            width={800}
+            height={600}
+            aspectRatio="4/3"
           />
           <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
             LocalAI Agent — High-performance edge AI server for enterprise deployment
@@ -133,14 +136,17 @@ const faqs = [
 
   <section class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark">
     <!-- Background Image -->
-    <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute inset-0 pointer-events-none" style="min-height: 600px;">
       <Image
         src={dataPrivacyImage}
         alt="A 3D isometric illustration of a digital fortress dome protecting local enterprise servers from external cloud data leaks, representing private and secure AI infrastructure."
         class="w-full h-full object-cover opacity-40 dark:opacity-50"
         widths={[800, 1200]}
-        loading="eager"
-        fetchpriority="high"
+        loading="lazy"
+        fetchpriority="low"
+        width={1920}
+        height={1080}
+        aspectRatio="16/9"
       />
     </div>
 
@@ -260,6 +266,10 @@ const faqs = [
               alt="A conceptual speed comparison diagram showing the ultra-low latency of local AI model inference versus the high-latency path of cloud-based AI processing."
               class="rounded-lg shadow-xl w-full h-auto"
               widths={[400, 600, 800]}
+              width={800}
+              height={600}
+              aspectRatio="4/3"
+              loading="lazy"
             />
           </div>
         </div>
