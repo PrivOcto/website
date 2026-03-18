@@ -74,27 +74,27 @@ The Gateway validates incoming messages against JSON Schema and keeps a typed We
 
 ### Sessions and Memory Management
 
-Session keys decide who you're talking to. The `dmScope` setting controls how conversations get grouped:
+Session keys decide who you're talking to. The ***dmScope*** setting controls how conversations get grouped:
 
-- `main` — one session across all channels
-- `per-channel-peer` — separate session for each channel + sender
-- `per-account-channel-peer` — adds account separation on top
+- ***main*** — one session across all channels
+- ***per-channel-peer*** — separate session for each channel + sender
+- ***per-account-channel-peer*** — adds account separation on top
 
 Memory lives as Markdown files in your workspace:
-- `MEMORY.md` — long-term facts about you
-- `memory/YYYY-MM-DD.md` — daily notes
+- ***MEMORY.md*** — long-term facts about you
+- ***memory/YYYY-MM-DD.md*** — daily notes
 
-When you need the agent to remember something specific, `memory_search` uses vector embeddings to find relevant snippets. `memory_get` pulls exact file contents.
+When you need the agent to remember something specific, ***memory_search*** uses vector embeddings to find relevant snippets. ***memory_get*** pulls exact file contents.
 
 ### Provider and Model Configuration
 
-You pick your model with `provider/model` format. Authenticate with API keys or OAuth. OpenClaw plays nice with:
+You pick your model with ***provider/model*** format. Authenticate with API keys or OAuth. OpenClaw plays nice with:
 - Anthropic (Claude)
 - OpenAI (GPT)
 - Google Gemini
 - Any custom OpenAI-compatible endpoint
 
-For custom providers, define `baseUrl`, `apiKey`, and `model` in `models.providers`. If you configure multiple keys and hit rate limits, it automatically rotates to the next one.
+For custom providers, define ***baseUrl***, ***apiKey***, and ***model*** in ***models.providers***. If you configure multiple keys and hit rate limits, it automatically rotates to the next one.
 
 ### Plugins and Tool Execution
 
@@ -110,14 +110,14 @@ The plugin system works in phases: manifest discovery → enablement validation 
 Skills are reusable packages that let the agent do specific things—fetching weather, deploying code, managing your calendar—without you building everything from scratch.
 
 A skill is just a directory with:
-- `SKILL.md` — YAML frontmatter + instructions
+- ***SKILL.md***— YAML frontmatter + instructions
 - Optional scripts or reference files
 
 ClawHub has over 2,857 skills available: coding, writing, data analytics, DevOps, AI/ML, community tools, productivity workflows. Install one with a single CLI command, and it automatically links into your workspace.
 
 Three places skills get loaded from, in order of priority:
 1. Workspace skills (your custom ones)
-2. `~/.openclaw/skills` (locally managed)
+2. ***~/.openclaw/skills*** (locally managed)
 3. Bundled skills (shipped with installation)
 
 Workspace skills override anything else with the same name—so you can customize behavior per-project while still benefiting from the shared library.

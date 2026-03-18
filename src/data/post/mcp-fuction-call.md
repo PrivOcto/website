@@ -145,7 +145,7 @@ For technical product leads, the real value of MCP lies in features that go beyo
 
 Standard Function Calling is "active"—the model asks to do something. MCP adds "Resources," which are "passive" pieces of data the model can read to gain context.
 
-* **Use Case:** Instead of a tool that "fetches a log file," you expose a resource path: `mcp://logs/today.log`.
+* **Use Case:** Instead of a tool that "fetches a log file," you expose a resource path: ***mcp://logs/today.log***.
 * **Benefit:** The model can decide *when* to read the context without needing to trigger a function call, reducing latency and token usage.
 
 ### Strategy 2: Prompt Templates
@@ -177,7 +177,7 @@ The transition from manual **Function Calling** to the **Model Context Protocol*
 
 **Q2: How does MCP handle authentication?**MCP supports various transport layers. For local processes, it uses standard input/output. For remote connections, it supports SSE with standard Web Auth (JWT, API Keys) to ensure only authorized clients can access your tools.
 
-**Q3: Can I run MCP servers locally?**Absolutely. One of MCP's strengths is the `stdio` transport, which allows your AI client to spin up a local server as a subprocess, providing the lowest possible latency and maximum privacy.
+**Q3: Can I run MCP servers locally?**Absolutely. One of MCP's strengths is the ***stdio*** transport, which allows your AI client to spin up a local server as a subprocess, providing the lowest possible latency and maximum privacy.
 
 ---
 

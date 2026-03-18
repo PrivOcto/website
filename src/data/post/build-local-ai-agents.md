@@ -271,9 +271,9 @@ For now, MCP is the most mature. It handles authentication, capability negotiati
 
 This matters more than most people think. I've seen deployments that were essentially leaving the door wide open.
 
-**Network isolation:** Bind to `127.0.0.1` only. No exceptions unless you have a very specific reason and proper firewall rules.
+**Network isolation:** Bind to ***127.0.0.1*** only. No exceptions unless you have a very specific reason and proper firewall rules.
 
-**Authentication:** Generate tokens with `openssl rand -hex 32` and require them for all connections.
+**Authentication:** Generate tokens with ***openssl rand -hex 32*** and require them for all connections.
 
 **Containerization:** Run agents in Docker with read-only filesystems. No host network access unless absolutely necessary.
 
