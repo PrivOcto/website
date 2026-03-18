@@ -225,6 +225,78 @@ html {
   contain-intrinsic-size: 0 1px;
 }
 
+/* 24. Fix icon CLS - ensure consistent sizing for astro-icon components */
+[astro-icon],
+svg[aria-hidden],
+svg[class*="w-"],
+svg[class*="h-"] {
+  display: inline-block;
+  flex-shrink: 0;
+  contain: layout;
+}
+
+/* 25. Header icon sizing */
+header svg,
+header [astro-icon] {
+  width: 1.25rem;
+  height: 1.25rem;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* 26. Navigation menu CLS prevention */
+nav ul,
+nav li {
+  contain: layout;
+  min-height: 44px;
+}
+
+/* 27. Mobile menu button fixed size */
+[data-aw-toggle-menu] {
+  min-width: 48px;
+  min-height: 48px;
+  contain: strict;
+}
+
+/* 28. RSS and theme toggle buttons fixed size */
+a[aria-label="RSS Feed"],
+button[data-aw-toggle-color-scheme] {
+  min-width: 40px;
+  min-height: 40px;
+  contain: layout;
+}
+
+/* 29. Prevent dropdown menu CLS */
+.dropdown-menu {
+  contain: layout;
+  min-width: 200px;
+}
+
+/* 30. Main content area CLS prevention */
+body > main,
+main {
+  contain: layout;
+  min-height: 50vh;
+}
+
+/* 31. Body layout containment */
+body {
+  contain: layout;
+}
+
+/* 32. Section spacing consistency */
+section.relative {
+  contain: layout;
+}
+
+/* 33. Button and action elements fixed height */
+button,
+a[role="button"],
+.inline-flex.items-center {
+  min-height: 40px;
+  contain: layout;
+}
+
 /* Blog Typography CSS Custom Properties - Based on User Specifications */
 :root {
   /* Font Families */
