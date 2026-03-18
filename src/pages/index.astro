@@ -134,9 +134,10 @@ const faqs = [
 
   <!-- Vision Section **************** -->
 
-  <section class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark">
-    <!-- Background Image -->
-    <div class="absolute inset-0 pointer-events-none" style="min-height: 600px;">
+  <section class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark" style="min-height: 500px;">
+    <!-- Background Image with placeholder -->
+    <div class="absolute inset-0 pointer-events-none" style="min-height: 500px;">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-dark z-10"></div>
       <Image
         src={dataPrivacyImage}
         alt="A 3D isometric illustration of a digital fortress dome protecting local enterprise servers from external cloud data leaks, representing private and secure AI infrastructure."
@@ -150,7 +151,7 @@ const faqs = [
       />
     </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
           The Future of Enterprise AI is Local

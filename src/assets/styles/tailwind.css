@@ -190,6 +190,41 @@ section.relative:first-of-type {
   height: 40px;
 }
 
+/* 20. Fix no-intersect attribute to prevent CLS */
+/* Elements should be visible by default, not hidden */
+[no-intersect] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 21. Ensure motion-safe opacity-0 elements are visible on load for critical content */
+@media (prefers-reduced-motion: no-preference) {
+  /* Only apply fade-in animation when motion is preferred */
+  .motion-safe\\:md\\:opacity-0 {
+    opacity: 1;
+  }
+  
+  .motion-safe\\:md\\:intersect\\:animate-fade[no-intersect] {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* 22. Critical above-the-fold content should always be visible */
+header,
+header *,
+main > section:first-child,
+main > section:first-child * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 23. Prevent layout shift during font swap */
+html {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1px;
+}
+
 /* Blog Typography CSS Custom Properties - Based on User Specifications */
 :root {
   /* Font Families */
