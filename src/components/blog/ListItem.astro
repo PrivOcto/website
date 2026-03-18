@@ -35,10 +35,12 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
                 class="absolute inset-0 object-cover w-full h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700 transition-transform duration-300 group-hover:scale-105"
                 widths={[400, 900, 1200]}
                 width={1200}
+                height={675}
                 sizes="(max-width: 900px) 400px, 900px"
                 alt={post.title}
                 loading="lazy"
                 decoding="async"
+                aspectRatio="16/9"
               />
             )}
           </div>
@@ -51,10 +53,12 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
               class="absolute inset-0 object-cover w-full h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
               widths={[400, 900, 1200]}
               width={1200}
+              height={675}
               sizes="(max-width: 900px) 400px, 900px"
               alt={post.title}
               loading="lazy"
               decoding="async"
+              aspectRatio="16/9"
             />
           )}
         </div>

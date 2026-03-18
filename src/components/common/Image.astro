@@ -37,6 +37,11 @@ if (!props.decoding) {
   props.decoding = 'async';
 }
 
+// Add fetchpriority for above-the-fold images
+if (props.fetchpriority === 'high' || props.loading === 'eager') {
+  props.fetchpriority = 'high';
+}
+
 const _image = await findImage(props.src);
 
 let image: ImageType | undefined = undefined;
@@ -56,6 +61,12 @@ if (
   !image ? (
     <Fragment />
   ) : (
-    <img src={image.src} crossorigin="anonymous" referrerpolicy="no-referrer" {...image.attributes} />
+    <img
+      src={image.src}
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      {...image.attributes}
+      class:list={[image.attributes.class, 'cls-protected']}
+    />
   )
 }

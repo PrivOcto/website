@@ -37,7 +37,18 @@ const { language, textDirection } = I18N;
     <SiteVerification />
 
     <!-- Preload critical font to reduce key request chain -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="/_astro/inter-latin-wght-normal.Dx4kXJAl.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Preload critical CSS inline to avoid render blocking -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      html{font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6}
+      body{margin:0;padding:0;min-height:100vh}
+      .bg-page{background-color:#fff}
+      .dark .bg-page{background-color:#0a0a0a}
+      img{max-width:100%;height:auto;display:block}
+    </style>
 
     <!-- Load non-critical CSS asynchronously -->
     <link rel="preload" href={tailwindCSS} as="style" onload="this.onload=null;this.rel='stylesheet'" />

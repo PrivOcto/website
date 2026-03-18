@@ -30,6 +30,34 @@ import '@fontsource-variable/inter';
     unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
   }
 
+  /* Additional font-face for Inter (non-variable) with swap */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('/_astro/inter-latin-wght-normal.Dx4kXJAl.woff2') format('woff2');
+  }
+
+  /* Prevent FOUC and layout shift */
+  html {
+    font-family: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Ensure body has minimum height to prevent layout shift */
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Content visibility for better rendering performance */
+  body > * {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+
   :root {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
