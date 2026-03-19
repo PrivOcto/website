@@ -15,7 +15,10 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
-.qwen
+
+# Qwen Code configuration and skills
+.qwen/
+
 # macOS-specific files
 .DS_Store
 
