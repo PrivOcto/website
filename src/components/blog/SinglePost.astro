@@ -18,19 +18,9 @@ export interface Props {
 const { post, url } = Astro.props;
 ---
 
-<section class="mt-8 sm:mt-16 lg:mt-20 mx-auto">
+<section class="mx-auto">
   <article class="relative">
-    <!-- Enhanced Header with gradient background -->
-    <div
-      class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-cyan-50/30 to-blue-50/50 dark:from-blue-950/50 dark:via-cyan-950/30 dark:to-blue-950/50 rounded-3xl -z-10"
-    >
-    </div>
-
-    <header
-      class={post.image
-        ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
-        : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
-    >
+    <header>
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
         <p class="flex flex-wrap items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
           <span class="flex items-center gap-1">
@@ -74,14 +64,14 @@ const { post, url } = Astro.props;
         {post.title}
       </h1>
       <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify leading-relaxed"
+        class="max-w-3xl mx-auto mt-4 mb-2 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify leading-relaxed"
       >
         {post.excerpt}
       </p>
 
       {
         post.image ? (
-          <div class="group max-w-3xl mx-auto mb-6 px-4 sm:px-6">
+          <div class="group max-w-3xl mx-auto mt-2 px-4 sm:px-6">
             <div class="relative rounded-2xl overflow-hidden shadow-lg transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-blue-500/20">
               <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <Image
@@ -107,7 +97,8 @@ const { post, url } = Astro.props;
       }
     </header>
     <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
+      style="margin-top: 0;"
+      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg prose-headings:scroll-mt-[80px] prose-li:my-0 [&>:first-child]:mt-0 [&>h1:first-child]:mt-0 [&>h1:first-child]:mb-6"
     >
       <slot />
     </div>
