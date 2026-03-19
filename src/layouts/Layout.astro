@@ -89,31 +89,35 @@ const { language, textDirection } = I18N;
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
 
-    <!-- Writesonic SEO Fixer - Load asynchronously to avoid blocking LCP -->
+    <BasicScripts />
+    <Analytics />
+
+    <!-- Writesonic SEO Fixer - Load after page is fully interactive to avoid blocking LCP -->
     <script
       src="https://seo-fixer.writesonic.com/site-audit/fixer-script/index.js"
       id="wsAiSeoMb"
       type="application/javascript"
-      defer></script>
-    <script id="wsAiSeoInitScript" defer>
-      // Initialize Writesonic SEO Fixer after DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initWritesonic);
-      } else {
-        initWritesonic();
-      }
+      defer
+      async></script>
+    <script id="wsAiSeoInitScript" defer async>
+      // Initialize Writesonic SEO Fixer after page is fully loaded
+      window.addEventListener('load', initWritesonic);
 
       function initWritesonic() {
-        if (typeof wsSEOfixer !== 'undefined') {
-          wsSEOfixer.configure({
-            hostURL: 'https://seo-fixer.writesonic.com',
-            siteID: '69b74f9a47f615e0a53978a7',
-          });
-        }
+        setTimeout(() => {
+          if (typeof wsSEOfixer !== 'undefined') {
+            try {
+              wsSEOfixer.configure({
+                hostURL: 'https://seo-fixer.writesonic.com',
+                siteID: '69b74f9a47f615e0a53978a7',
+              });
+            } catch (e) {
+              // Silently fail if script is blocked by CSP or unavailable
+              console.debug('Writesonic SEO Fixer not available');
+            }
+          }
+        }, 3000); // Delay initialization by 3 seconds to prioritize user experience
       }
     </script>
-
-    <BasicScripts />
-    <Analytics />
   </body>
 </html>

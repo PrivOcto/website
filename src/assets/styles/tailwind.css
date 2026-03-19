@@ -184,11 +184,16 @@ header[style*='position:fixed'] {
 
 /* 17. Ensure all sections have defined min-height during load */
 section.relative {
-  min-height: 100vh;
+  contain: layout style;
 }
 
 section.relative:first-of-type {
   min-height: auto;
+}
+
+/* Hero section specific CLS prevention */
+section.relative.py-20.md\:py-32 {
+  min-height: 800px;
 }
 
 /* 18. Prevent layout shift in grid layouts */

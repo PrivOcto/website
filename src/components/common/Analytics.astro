@@ -1,12 +1,7 @@
 ---
 import { GoogleAnalytics } from '@astrolib/analytics';
 import { ANALYTICS } from 'astrowind:config';
-import VercelAnalytics from '@vercel/analytics/astro';
-import VercelSpeedInsights from '@vercel/speed-insights/astro';
 ---
-
-<VercelAnalytics />
-<VercelSpeedInsights />
 
 {
   ANALYTICS?.vendors?.googleAnalytics?.id ? (
@@ -16,3 +11,14 @@ import VercelSpeedInsights from '@vercel/speed-insights/astro';
     />
   ) : null
 }
+
+<!-- Load Vercel Analytics and Speed Insights asynchronously after page load -->
+<script defer>
+  // Load Vercel Analytics after a delay to prioritize LCP
+  setTimeout(() => {
+    const script = document.createElement('script');
+    script.src = '/_vercel/insights/script.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  }, 2000);
+</script>

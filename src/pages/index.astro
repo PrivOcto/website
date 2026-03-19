@@ -81,11 +81,14 @@ const faqs = [
 <Layout metadata={metadata}>
   <!-- Hero Section ******************* -->
 
-  <section class="relative py-20 md:py-32 overflow-hidden bg-page dark:bg-dark">
+  <section
+    class="relative py-20 md:py-32 overflow-hidden bg-page dark:bg-dark"
+    style="min-height: 800px; contain: layout style;"
+  >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Content -->
-        <div class="text-center lg:text-left">
+        <div class="text-center lg:text-left" style="contain: layout;">
           <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-4">
             Currently building. Early access coming soon.
           </p>
@@ -116,10 +119,10 @@ const faqs = [
         </div>
 
         <!-- Right: Image -->
-        <div class="relative px-4">
+        <div class="relative px-4" style="contain: layout;">
           <div
             class="relative bg-gradient-to-br from-blue-100/50 to-cyan-100/50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg"
-            style="aspect-ratio: 16/9; min-height: 400px;"
+            style="aspect-ratio: 16/9; min-height: 400px; contain: layout;"
           >
             <Image
               src={edgeServerImage}
@@ -143,9 +146,12 @@ const faqs = [
 
   <!-- Vision Section **************** -->
 
-  <section class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark" style="min-height: 500px;">
+  <section
+    class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark"
+    style="min-height: 500px; contain: layout style;"
+  >
     <!-- Background Image with placeholder -->
-    <div class="absolute inset-0 pointer-events-none" style="min-height: 500px;">
+    <div class="absolute inset-0 pointer-events-none" style="min-height: 500px; contain: layout;">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-dark z-10"></div>
       <div
         class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-cyan-50/50 dark:from-blue-900/10 dark:to-cyan-900/10"
