@@ -85,34 +85,48 @@ const faqs = [
     class="relative py-20 md:py-32 overflow-hidden bg-page dark:bg-dark"
     style="min-height: 800px; contain: layout style;"
   >
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Enhanced Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-cyan-50/50 to-blue-50/80 dark:from-blue-950/80 dark:via-cyan-950/50 dark:to-blue-950/80 animate-gradient-slow" style="background-size: 200% 200%;"></div>
+    
+    <!-- Decorative floating orbs -->
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-float-delayed"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Content -->
         <div class="text-center lg:text-left" style="contain: layout;">
-          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-4">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-4 animate-fade">
             Currently building. Early access coming soon.
           </p>
           <h1
-            class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-6 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient"
+            class="text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-6 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient-slow drop-shadow-lg"
+            style="background-size: 200% 200%; text-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);"
           >
             LocalAI Agent
           </h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             Deploy local AI models and run enterprise-grade AI agents securely on your own infrastructure.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href={getPermalink('/contact')}
-              class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-primary hover:bg-secondary transition-colors"
+              class="group inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
             >
               Join the Waitlist
+              <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
             </a>
             <a
               href="https://twitter.com/localai67177"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-primary bg-white border-2 border-primary hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:border-white dark:hover:bg-gray-700 transition-colors"
+              class="group inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-xl text-primary bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-primary hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
               Follow Us
             </a>
           </div>
@@ -150,6 +164,16 @@ const faqs = [
     class="relative py-16 md:py-24 overflow-hidden bg-page dark:bg-dark"
     style="min-height: 500px; contain: layout style;"
   >
+    <!-- Enhanced Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-cyan-50/30 to-blue-50/50 dark:from-blue-950/50 dark:via-cyan-950/30 dark:to-blue-950/50"></div>
+    
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style="background-image: linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px); background-size: 60px 60px;"></div>
+    
+    <!-- Floating decorative elements -->
+    <div class="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-blue-400/15 to-cyan-400/15 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-20 h-20 bg-gradient-to-tr from-purple-400/15 to-blue-400/15 rounded-full blur-xl animate-float-delayed"></div>
+    
     <!-- Background Image with placeholder -->
     <div class="absolute inset-0 pointer-events-none" style="min-height: 500px; contain: layout;">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-dark z-10"></div>
@@ -173,15 +197,16 @@ const faqs = [
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
       <div class="max-w-4xl mx-auto text-center">
         <h2
-          class="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent"
+          class="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient-slow drop-shadow-lg"
+          style="background-size: 200% 200%;"
         >
           The Future of Enterprise AI is Local
         </h2>
         <div
-          class="space-y-6 text-lg text-gray-600 dark:text-gray-300 bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm p-8 rounded-2xl"
+          class="space-y-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/30"
         >
-          <p>Cloud AI is powerful, but enterprises need more control over their data and infrastructure.</p>
-          <p>
+          <p class="leading-relaxed">Cloud AI is powerful, but enterprises need more control over their data and infrastructure.</p>
+          <p class="leading-relaxed">
             LocalAI Agent empowers businesses to deploy AI models locally and run enterprise-grade AI agents for secure,
             private, and efficient workflows.
           </p>
@@ -217,22 +242,25 @@ const faqs = [
 
   <!-- Why Local AI ****************** -->
 
-  <section class="py-16 md:py-24 bg-page dark:bg-dark">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="relative py-16 md:py-24 bg-page dark:bg-dark overflow-hidden">
+    <!-- Enhanced background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent dark:via-blue-950/20"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Local AI?</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300">Take control of your AI infrastructure and data</p>
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient-slow" style="background-size: 200% 200%;">Why Local AI?</h2>
+          <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">Take control of your AI infrastructure and data</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Left: Benefits List -->
           <div class="space-y-6">
             <div
-              class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm transition-all duration-300 hover:bg-card/60 dark:hover:bg-card-dark/60"
+              class="group flex items-start space-x-4 p-6 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 dark:hover:bg-gray-800/80"
             >
-              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -242,31 +270,31 @@ const faqs = [
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Data Privacy & Security</h3>
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Data Privacy & Security</h3>
                 <p class="text-gray-600 dark:text-gray-300">Keep sensitive enterprise data inside your organization.</p>
               </div>
             </div>
 
             <div
-              class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm transition-all duration-300 hover:bg-card/60 dark:hover:bg-card-dark/60"
+              class="group flex items-start space-x-4 p-6 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 dark:hover:bg-gray-800/80"
             >
-              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"
                   ></path>
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Low Latency</h3>
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Low Latency</h3>
                 <p class="text-gray-600 dark:text-gray-300">Immediate AI responses without cloud dependency.</p>
               </div>
             </div>
 
             <div
-              class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm transition-all duration-300 hover:bg-card/60 dark:hover:bg-card-dark/60"
+              class="group flex items-start space-x-4 p-6 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 dark:hover:bg-gray-800/80"
             >
-              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -281,16 +309,16 @@ const faqs = [
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Full Infrastructure Control</h3>
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Full Infrastructure Control</h3>
                 <p class="text-gray-600 dark:text-gray-300">Customize your AI environment for your business.</p>
               </div>
             </div>
 
             <div
-              class="flex items-start space-x-4 p-4 rounded-xl bg-card/50 dark:bg-card-dark/50 backdrop-blur-sm transition-all duration-300 hover:bg-card/60 dark:hover:bg-card-dark/60"
+              class="group flex items-start space-x-4 p-6 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 dark:hover:bg-gray-800/80"
             >
-              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -300,7 +328,7 @@ const faqs = [
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">No Cloud Dependency</h3>
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">No Cloud Dependency</h3>
                 <p class="text-gray-600 dark:text-gray-300">Reduce costs and risks of cloud-based AI.</p>
               </div>
             </div>

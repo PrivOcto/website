@@ -1,0 +1,56 @@
+---
+/**
+ * EnhancedCard - Glassmorphism card with hover effects
+ * Low performance impact - uses CSS transforms and opacity only
+ */
+
+interface Props {
+  class?: string;
+  href?: string;
+  target?: string;
+  rel?: string;
+}
+
+const { class: className = '', href, target, rel } = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      target={target}
+      rel={rel}
+      class={`group relative overflow-hidden rounded-2xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] ${className}`}
+    >
+      <!-- Shine effect -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" style="background-size: 200% 100%;"></div>
+      </div>
+      
+      <!-- Content -->
+      <div class="relative z-10">
+        <slot />
+      </div>
+      
+      <!-- Subtle glow on hover -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-blue-500/5"></div>
+    </a>
+  ) : (
+    <div
+      class={`group relative overflow-hidden rounded-2xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] ${className}`}
+    >
+      <!-- Shine effect -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" style="background-size: 200% 100%;"></div>
+      </div>
+      
+      <!-- Content -->
+      <div class="relative z-10">
+        <slot />
+      </div>
+      
+      <!-- Subtle glow on hover -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-blue-500/5"></div>
+    </div>
+  )
+}
