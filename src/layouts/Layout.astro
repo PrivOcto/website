@@ -80,15 +80,26 @@ const { language, textDirection } = I18N;
         font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size-adjust: 0.5; /* Helps maintain consistent text sizing */
       }
-      /* Prevent CLS from animations */
+      /* Prevent CLS from animations - force GPU compositing */
       [data-animated="true"],
       .intersect-once {
         will-change: transform, opacity;
+        transform: translateZ(0);
+        backface-visibility: hidden;
       }
       /* Stabilize main content area */
       main {
         contain: layout style paint;
         min-height: 100vh;
+      }
+      /* Prevent mobile CLS from header elements */
+      header {
+        contain: layout style;
+      }
+      /* Ensure stable icon sizing */
+      svg[class*="w-"], svg[class*="h-"] {
+        display: inline-block;
+        vertical-align: middle;
       }
     </style>
 
