@@ -80,6 +80,16 @@ const { language, textDirection } = I18N;
         font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size-adjust: 0.5; /* Helps maintain consistent text sizing */
       }
+      /* Prevent CLS from animations */
+      [data-animated="true"],
+      .intersect-once {
+        will-change: transform, opacity;
+      }
+      /* Stabilize main content area */
+      main {
+        contain: layout style paint;
+        min-height: 100vh;
+      }
     </style>
 
     <!-- Load non-critical CSS asynchronously -->
