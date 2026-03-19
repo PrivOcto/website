@@ -1,0 +1,37 @@
+---
+/**
+ * ServiceWorkerRegistration - Client-side script to register service worker
+ * Place this component at the end of your Layout.astro body
+ */
+---
+
+<script>
+  if ('serviceWorker' in navigator) {
+    // Register service worker after page load
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful:', registration.scope);
+        })
+        .catch((err) => {
+          console.log('ServiceWorker registration failed:', err);
+        });
+    });
+
+    // Update service worker when page is in use
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      refreshing = true;
+      // Show update notification to user
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification('Update Available', {
+          body: 'A new version of LocalAI Agent is available. Refresh to update.',
+          icon: '/favicons/icon-192x192.png',
+        });
+      }
+      window.location.reload();
+    });
+  }
+</script>

@@ -57,7 +57,7 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 7. Skeleton loading animation for images */
+/* 7. Skeleton loading animation for images and content */
 @keyframes skeleton-loading {
   0% {
     background-position: 200% 0;
@@ -75,6 +75,55 @@ img {
 }
 
 .dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+}
+
+/* Skeleton for text lines */
+.skeleton-text {
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+.skeleton-text.medium {
+  width: 80%;
+}
+
+/* Skeleton for cards */
+.skeleton-card {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 0.5rem;
+  min-height: 200px;
+}
+
+.dark .skeleton-card {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+}
+
+/* Skeleton for avatar/images */
+.skeleton-image {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 0.375rem;
+}
+
+.dark .skeleton-image {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.05) 25%,
@@ -202,10 +251,18 @@ section.relative.py-20.md\:py-32 {
   contain: layout;
 }
 
-/* 19. Logo image CLS prevention */
+/* 19. Logo image CLS prevention - Updated for 80px logo */
 .logo img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+  contain: layout;
+}
+
+/* Logo container stability */
+.logo {
+  min-width: 80px;
+  min-height: 80px;
+  contain: layout;
 }
 
 /* 20. Fix no-intersect attribute to prevent CLS */

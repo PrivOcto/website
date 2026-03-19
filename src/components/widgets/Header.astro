@@ -52,7 +52,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
-  style="contain: layout; min-height: 64px;"
+  style="contain: layout; min-height: 80px;"
 >
   <div class="absolute inset-0"></div>
   <div
@@ -69,12 +69,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   >
     <div
       class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}
-      style="min-height: 48px;"
+      style="min-height: 80px;"
     >
       <a class="flex items-center" href={getHomePermalink()} aria-label="LocalAI Agent Home">
         <Logo />
       </a>
-      <div class="flex items-center md:hidden" style="min-width: 48px; min-height: 48px;">
+      <div class="flex items-center md:hidden" style="min-width: 48px; min-height: 80px;">
         <ToggleMenu />
       </div>
     </div>
