@@ -85,7 +85,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # Add your Google Analytics ID: G-XXXXXXXXXX
+      id: null # Set via environment variable PUBLIC_GOOGLE_ANALYTICS_ID (e.g., G-XXXXXXXXXX)
       partytown: false
 
 ui:
