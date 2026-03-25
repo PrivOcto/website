@@ -6,10 +6,7 @@ export interface Props {
 const { isDark = false } = Astro.props;
 ---
 
-<div class:list={[
-  'absolute inset-0 pointer-events-none',
-  isDark ? 'bg-dark' : 'bg-transparent',
-]}>
+<div class:list={['absolute inset-0 pointer-events-none', isDark ? 'bg-dark' : 'bg-transparent']}>
   <div class="absolute inset-0 bg-white/80 dark:bg-[#050505]/80 backdrop-blur-[2px]"></div>
   <div class="absolute inset-0 noise-texture opacity-30"></div>
   <slot />

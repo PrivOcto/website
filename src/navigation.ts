@@ -62,6 +62,7 @@ export const footerData: FooterData = {
   secondaryLinks: [
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms of Service', href: getPermalink('/terms') },
+    { text: 'Cookie Policy', href: getPermalink('/cookies') },
   ],
   socialLinks: [
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/LocalAI-Agent' },

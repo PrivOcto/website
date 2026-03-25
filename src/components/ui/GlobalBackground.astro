@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <div class="fixed inset-0 pointer-events-none -z-[100] overflow-hidden" aria-hidden="true">
@@ -6,22 +7,39 @@
   <div class="absolute inset-0 bg-page dark:bg-dark transition-colors duration-500"></div>
 
   <!-- Tech Grid Pattern -->
-  <div class="absolute inset-0 opacity-[0.02] dark:opacity-[0.08]"
-       style="background-image: linear-gradient(to right, #808080 1px, transparent 1px), linear-gradient(to bottom, #808080 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(circle at center, black 60%, transparent 100%); -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);">
+  <div
+    class="absolute inset-0 opacity-[0.02] dark:opacity-[0.08]"
+    style="background-image: linear-gradient(to right, #808080 1px, transparent 1px), linear-gradient(to bottom, #808080 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(circle at center, black 60%, transparent 100%); -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);"
+  >
   </div>
 
   <!-- Ambient Glows -->
-  <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-klein/10 dark:bg-klein/20 rounded-full blur-[120px] mix-blend-overlay dark:mix-blend-screen animate-float-slow"></div>
-  <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-electric-cyan/10 dark:bg-electric-cyan/20 rounded-full blur-[120px] mix-blend-overlay dark:mix-blend-screen animate-float-delayed"></div>
-  
+  <div
+    class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-klein/10 dark:bg-klein/20 rounded-full blur-[120px] mix-blend-overlay dark:mix-blend-screen animate-float-slow"
+  >
+  </div>
+  <div
+    class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-electric-cyan/10 dark:bg-electric-cyan/20 rounded-full blur-[120px] mix-blend-overlay dark:mix-blend-screen animate-float-delayed"
+  >
+  </div>
+
   <!-- Subtle noise texture for texture -->
-  <div class="absolute inset-0 opacity-[0.15] dark:opacity-[0.2] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%221%22/%3E%3C/svg%3E');"></div>
+  <div
+    class="absolute inset-0 opacity-[0.15] dark:opacity-[0.2] mix-blend-overlay"
+    style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%221%22/%3E%3C/svg%3E');"
+  >
+  </div>
 </div>
 
 <style>
   @keyframes float-slow {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, 20px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, 20px);
+    }
   }
   .animate-float-slow {
     animation: float-slow 15s ease-in-out infinite;
