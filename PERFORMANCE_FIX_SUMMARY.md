@@ -1,4 +1,4 @@
-# Performance Fix Summary - LocalAI Agent Website
+# Performance Fix Summary - PrivOcto Website
 
 ## 📊 Issues Identified from Lighthouse Reports
 
@@ -243,8 +243,8 @@ section.relative.py-20.md\:py-32 {
 1. **Re-run Lighthouse Tests**
 
    ```bash
-   npx lighthouse https://localaiagent.tech/ --output=json --output-path=desktop_report_new.json
-   npx lighthouse https://localaiagent.tech/ --output=json --output-path=mobile_report_new.json --preset=mobile
+   npx lighthouse https://privocto.com/ --output=json --output-path=desktop_report_new.json
+   npx lighthouse https://privocto.com/ --output=json --output-path=mobile_report_new.json --preset=mobile
    ```
 
 2. **Monitor Real User Metrics (RUM)**

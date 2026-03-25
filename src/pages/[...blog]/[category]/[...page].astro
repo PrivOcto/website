@@ -20,8 +20,8 @@ const { page, category } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `${category.title} - LocalAI Agent Blog${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
-  description: `Read articles about ${category.title} on LocalAI Agent blog.`,
+  title: `${category.title} - PrivOcto Blog${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
+  description: `Read articles about ${category.title} on PrivOcto blog.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

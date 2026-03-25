@@ -1,13 +1,13 @@
 ---
-title: 'Terms of Service - LocalAI Agent Usage Agreement'
+title: 'Terms of Service - PrivOcto Usage Agreement'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
 _Last Updated_: March 14, 2026
 
-Welcome to LocalAI Agent.
+Welcome to PrivOcto.
 
-These Terms of Service ("Terms") govern your access to and use of the LocalAI Agent website and any related services provided by LocalAI Agent ("we", "our", or "us").
+These Terms of Service ("Terms") govern your access to and use of the PrivOcto website and any related services provided by PrivOcto ("we", "our", or "us").
 
 By accessing or using our website, you agree to be bound by these Terms. If you do not agree with these Terms, please do not use our website.
 
@@ -26,7 +26,7 @@ We reserve the right to suspend or terminate access to the website for users who
 
 ## 2. Early Access and Future Services
 
-LocalAI Agent is currently under development.
+PrivOcto is currently under development.
 
 Any features, services, or product descriptions presented on this website are for informational purposes only and may change before official release.
 
@@ -43,7 +43,7 @@ All content on this website, including but not limited to:
 - Software
 - Documentation
 
-is the property of LocalAI Agent or its licensors and is protected by applicable intellectual property laws.
+is the property of PrivOcto or its licensors and is protected by applicable intellectual property laws.
 
 You may not copy, reproduce, distribute, modify, or create derivative works from our content without prior written permission.
 
@@ -58,13 +58,13 @@ Our website may contain links to third-party platforms, including:
 
 These services are operated by third parties and are governed by their own terms and policies.
 
-LocalAI Agent is not responsible for the content, policies, or practices of third-party websites.
+PrivOcto is not responsible for the content, policies, or practices of third-party websites.
 
 ## 5. Disclaimer of Warranties
 
 The website and its content are provided "as is" and "as available" without warranties of any kind.
 
-To the fullest extent permitted by law, LocalAI Agent disclaims all warranties, including but not limited to:
+To the fullest extent permitted by law, PrivOcto disclaims all warranties, including but not limited to:
 
 - Merchantability
 - Fitness for a particular purpose
@@ -75,7 +75,7 @@ We do not guarantee that the website will always be secure, error-free, or unint
 
 ## 6. Limitation of Liability
 
-To the maximum extent permitted by law, LocalAI Agent shall not be liable for any indirect, incidental, or consequential damages arising from:
+To the maximum extent permitted by law, PrivOcto shall not be liable for any indirect, incidental, or consequential damages arising from:
 
 - Use of the website
 - Inability to access the website
@@ -99,11 +99,11 @@ Your continued use of the website after changes are posted constitutes acceptanc
 
 ## 9. Governing Law
 
-These Terms shall be governed by and interpreted in accordance with the applicable laws of the jurisdiction in which LocalAI Agent operates, without regard to conflict of law principles.
+These Terms shall be governed by and interpreted in accordance with the applicable laws of the jurisdiction in which PrivOcto operates, without regard to conflict of law principles.
 
 ## 10. Contact Information
 
 If you have any questions about these Terms of Service, please contact us:
 
-- **Email**: server@localaiagent.tech
-- **Website**: https://localaiagent.tech
+- **Email**: server@privocto.com
+- **Website**: https://privocto.com

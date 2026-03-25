@@ -18,7 +18,7 @@ featured: true
 trending: false
 priority: 0.9
 metadata:
-  canonical: https://localaiagent.tech/blog/vllm-sglang
+  canonical: https://privocto.com/blog/vllm-sglang
   robots:
     index: true
     follow: true
@@ -186,8 +186,8 @@ The **vLLM vs SGLang** decision ultimately depends on your specific workload. Fo
 
 ## Related Articles
 
-- [MCP vs Function Calling: AI Tool Integration Guide](https://localaiagent.tech/blog/mcp-fuction-call) — Tool integration patterns for AI systems
-- [How to Build Local AI Agents: A Privacy-First Guide](https://localaiagent.tech/blog/build-local-ai-agents) — Deploy local inference with vLLM/SGLang
+- [MCP vs Function Calling: AI Tool Integration Guide](https://privocto.com/blog/mcp-fuction-call) — Tool integration patterns for AI systems
+- [How to Build Local AI Agents: A Privacy-First Guide](https://privocto.com/blog/build-local-ai-agents) — Deploy local inference with vLLM/SGLang
 - [vLLM Official Documentation](https://docs.vllm.ai/) — Complete vLLM setup guide
 - [SGLang GitHub Repository](https://github.com/sgl-project/sglang) — Official SGLang implementation
 - [PagedAttention Paper](https://arxiv.org/abs/2309.10380) — Technical foundation of vLLM

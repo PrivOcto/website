@@ -21,7 +21,7 @@ featured: true
 trending: false
 priority: 0.9
 metadata:
-  canonical: https://localaiagent.tech/blog/agents-design
+  canonical: https://privocto.com/blog/agents-design
   robots:
     index: true
     follow: true
@@ -226,9 +226,9 @@ The primary trade-off with Reflection is increased latency and compute costs, as
 
 ## Related Articles
 
-- [MCP vs Function Calling: AI Tool Integration Guide](https://localaiagent.tech/blog/mcp-fuction-call) — Tool integration patterns for AI systems
-- [How to Build Local AI Agents: A Privacy-First Guide](https://localaiagent.tech/blog/build-local-ai-agents) — Deploy local inference with vLLM/SGLang
-- [openclaw](https://localaiagent.tech/blog/openclaw) — How openclaw works
+- [MCP vs Function Calling: AI Tool Integration Guide](https://privocto.com/blog/mcp-fuction-call) — Tool integration patterns for AI systems
+- [How to Build Local AI Agents: A Privacy-First Guide](https://privocto.com/blog/build-local-ai-agents) — Deploy local inference with vLLM/SGLang
+- [openclaw](https://privocto.com/blog/openclaw) — How openclaw works
 - [SGLang GitHub Repository](https://github.com/sgl-project/sglang) — Official SGLang implementation
 - [PagedAttention Paper](https://arxiv.org/abs/2309.10380) — Technical foundation of vLLM
 - [vLLM vs LM Deploy](https://www.benchmark.to/llm-inference) — Additional inference engine comparisons

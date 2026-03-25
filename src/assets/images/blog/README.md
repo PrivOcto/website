@@ -132,7 +132,7 @@ tags:
   - AI
   - Tutorial
 metadata:
-  canonical: https://localaiagent.tech/blog/your-post
+  canonical: https://privocto.com/blog/your-post
 ---
 
 ## Your Content Here

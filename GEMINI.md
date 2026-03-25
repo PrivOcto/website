@@ -1,8 +1,8 @@
-# GEMINI.md - LocalAI Agent Project Context
+# GEMINI.md - PrivOcto Project Context
 
 ## Project Overview
 
-**LocalAI Agent** is an enterprise-focused website for AI infrastructure and agents. It emphasizes local AI deployment, data privacy, and low-latency performance. The project is built using the **Astro 5.0** framework with the **AstroWind** template.
+**PrivOcto** is an enterprise-focused website for AI infrastructure and agents. It emphasizes local AI deployment, data privacy, and low-latency performance. The project is built using the **Astro 5.0** framework with the **AstroWind** template.
 
 - **Primary Technologies:** Astro 5.0, Tailwind CSS, TypeScript.
 - **Content Management:** Markdown (`.md`) and MDX (`.mdx`) for blog posts and pages.

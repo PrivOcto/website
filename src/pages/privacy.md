@@ -1,11 +1,11 @@
 ---
-title: 'Privacy Policy - LocalAI Agent Data Protection'
+title: 'Privacy Policy - PrivOcto Data Protection'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
 _Last Updated_: March 14, 2026
 
-LocalAI Agent ("we", "our", or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website.
+PrivOcto ("we", "our", or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website.
 
 By using our website, you agree to the terms of this Privacy Policy.
 
@@ -40,7 +40,7 @@ This information helps us improve our website and understand how users interact 
 We may use the collected information for the following purposes:
 
 - To provide and maintain our website
-- To communicate updates about LocalAI Agent
+- To communicate updates about PrivOcto
 - To notify you about product launches or early access
 - To improve our website and services
 - To analyze website traffic and usage
@@ -118,5 +118,5 @@ We encourage users to review this page periodically.
 
 If you have any questions about this Privacy Policy, please contact us:
 
-- **Email**: server@localaiagent.tech
-- **Website**: https://localai-agent.tech
+- **Email**: server@privocto.com
+- **Website**: https://privocto.com

@@ -1,4 +1,4 @@
-// Basic Service Worker for LocalAI Agent
+// Basic Service Worker for PrivOcto
 // This service worker provides basic caching for offline support
 
 const CACHE_NAME = 'localai-v1';

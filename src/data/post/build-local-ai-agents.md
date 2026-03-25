@@ -19,7 +19,7 @@ featured: true
 trending: false
 priority: 0.9
 metadata:
-  canonical: https://localaiagent.tech/blog/build-local-ai-agents
+  canonical: https://privocto.com/blog/build-local-ai-agents
   robots:
     index: true
     follow: true
@@ -381,8 +381,8 @@ Data science for non-coders, local financial analysis, media processing with ffm
 
 ## Related Articles
 
-- [MCP vs Function Calling: AI Tool Integration Guide](https://localaiagent.tech/blog/mcp-fuction-call) — Compare MCP with traditional function calling approaches
-- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://localaiagent.tech/blog/vllm-sglang) — Optimize your local AI inference engine
+- [MCP vs Function Calling: AI Tool Integration Guide](https://privocto.com/blog/mcp-fuction-call) — Compare MCP with traditional function calling approaches
+- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://privocto.com/blog/vllm-sglang) — Optimize your local AI inference engine
 - [Ollama Official Documentation](https://ollama.com/docs) — Complete setup and configuration guide
 - [LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Build multi-agent systems
 - [Anthropic AI Safety Guidelines](https://www.anthropic.com/ai-safety) — Security best practices for AI agents

@@ -18,7 +18,7 @@ featured: true
 trending: false
 priority: 0.9
 metadata:
-  canonical: https://localaiagent.tech/blog/mcp-fuction-call
+  canonical: https://privocto.com/blog/mcp-fuction-call
   robots:
     index: true
     follow: true
@@ -181,8 +181,8 @@ The transition from manual **Function Calling** to the **Model Context Protocol*
 
 ## Related Articles
 
-- [How to Build Local AI Agents: A Privacy-First Guide](https://localaiagent.tech/blog/build-local-ai-agents) — Build your own privacy-first AI agents
-- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://localaiagent.tech/blog/vllm-sglang) — Choose the right inference engine
+- [How to Build Local AI Agents: A Privacy-First Guide](https://privocto.com/blog/build-local-ai-agents) — Build your own privacy-first AI agents
+- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://privocto.com/blog/vllm-sglang) — Choose the right inference engine
 - [Anthropic: Model Context Protocol Announcement](https://www.anthropic.com/news/model-context-protocol) — Official MCP announcement
 - [MCP GitHub Repository](https://github.com/modelcontextprotocol) — Official implementation
 - [LangChain MCP Integration](https://python.langchain.com/docs/integrations/mcp/) — Python integration guide

@@ -21,7 +21,7 @@ featured: true
 trending: false
 priority: 0.9
 metadata:
-  canonical: https://localaiagent.tech/blog/openclaw
+  canonical: https://privocto.com/blog/openclaw
   robots:
     index: true
     follow: true
@@ -145,9 +145,9 @@ With skills, OpenClaw integrates into WhatsApp, Slack, IDEs, servers—whatever 
 
 ## Related Articles
 
-- [How to Build Local AI Agents: A Privacy-First Guide](https://localaiagent.tech/blog/build-local-ai-agents) — Build your own privacy-first AI agents from scratch
-- [MCP vs Function Calling: AI Tool Integration Guide](https://localaiagent.tech/blog/mcp-fuction-call) — Compare MCP with traditional function calling approaches
-- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://localaiagent.tech/blog/vllm-sglang) — Optimize your local AI inference engine
+- [How to Build Local AI Agents: A Privacy-First Guide](https://privocto.com/blog/build-local-ai-agents) — Build your own privacy-first AI agents from scratch
+- [MCP vs Function Calling: AI Tool Integration Guide](https://privocto.com/blog/mcp-fuction-call) — Compare MCP with traditional function calling approaches
+- [vLLM vs SGLang: Enterprise LLM Inference Comparison](https://privocto.com/blog/vllm-sglang) — Optimize your local AI inference engine
 - [OpenClaw Official Documentation](https://docs.openclaw.ai/) — Complete setup and configuration guide
 - [ClawHub Skills Registry](https://clawhub.dev/) — Download 10,000+ AI agent skills
 - [Anthropic AI Safety Guidelines](https://www.anthropic.com/ai-safety) — Security best practices for AI agents

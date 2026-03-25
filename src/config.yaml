@@ -1,6 +1,6 @@
 site:
-  name: LocalAI Agent
-  site: 'https://localaiagent.tech'
+  name: PrivOcto
+  site: 'https://privocto.com'
   base: '/'
   trailingSlash: false
 
@@ -9,35 +9,36 @@ site:
 # Default SEO metadata - Optimized for search engines and social sharing
 metadata:
   title:
-    default: LocalAI Agent - Enterprise AI Infrastructure & Agents
+    default: PrivOcto - Priv-Standard, Octo-Stability.
     template: '%s'
-  description: 'LocalAI Agent helps enterprises deploy AI models locally with complete data privacy and low latency.'
+  description: 'PrivOcto: Secure AI agents featuring a local de-identification layer. We protect enterprise data by scrubbing sensitive info locally before cloud processing, combining air-gapped privacy with cutting-edge LLM intelligence.'
   keywords:
-    - local AI
-    - enterprise AI
-    - AI agents
-    - local LLM deployment
-    - private AI infrastructure
-    - edge AI
-    - AI security
-    - self-hosted AI
-    - enterprise machine learning
-    - AI data privacy
+    - Privacy-Preserving AI Agent   
+    - Local De-identification Layer  
+    - Hybrid Private AI Architecture 
+    - Sensitive Data Scrubbing       
+    - PII Redaction for LLMs         
+    - Secure Cloud-Edge AI          
+    - Zero-Trust AI Integration      
+    - Privacy-First Prompt Engineering 
+    - Enterprise Data Sovereignty    
+    - Local LLM Pre-processing       
+    - Compliance-Ready AI Agents      
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: LocalAI Agent
+    site_name: PrivOcto
     images:
       - url: '~/assets/images/local-ai-agent-edge-server-hardware.webp'
         width: 1200
         height: 630
-        alt: LocalAI Agent - Enterprise AI Infrastructure
+        alt: PrivOcto - Enterprise AI Infrastructure
     type: website
     locale: en_US
   twitter:
-    handle: '@localai67177'
-    site: '@localai67177'
+    handle: '@privocto'
+    site: '@privocto'
     cardType: summary_large_image
     image: '~/assets/images/local-ai-agent-edge-server-hardware.webp'
 
