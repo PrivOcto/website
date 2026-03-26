@@ -13,7 +13,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://seo-fixer.writesonic.com https://www.googletagmanager.com https://www.google-analytics.com https://v1.analytics.vercel.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://v1.analytics.vercel.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://seo-fixer.writesonic.com https://www.googletagmanager.com https://www.google-analytics.com https://v1.analytics.vercel.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://v1.analytics.vercel.com https://challenges.cloudflare.com;"
 
 # Cache Control for Astro assets
 [[headers]]
