@@ -81,38 +81,39 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
                 <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center gap-1"
                   aria-label={ariaLabel}
                   href={href}
                 >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
+                  {icon && <Icon name={icon} class="w-5 h-5" aria-hidden="true" />}
+                  {text && <span>{text}</span>}
                 </a>
               </li>
             ))}
             {/* RSS Feed Link */}
             <li>
               <a
-                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center gap-1"
                 aria-label="RSS Feed"
                 href="/rss.xml"
                 title="Subscribe to RSS Feed"
               >
-                <Icon name="tabler:rss" class="w-5 h-5" />
-                <span class="sr-only">RSS Feed</span>
+                <Icon name="tabler:rss" class="w-5 h-5" aria-hidden="true" />
+                <span>RSS</span>
               </a>
             </li>
             {/* Reddit Link */}
             <li>
               <a
-                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center gap-1"
                 aria-label="Reddit"
                 href="https://www.reddit.com/user/PrivOcto/"
                 title="Follow us on Reddit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name="tabler:brand-reddit" class="w-5 h-5" />
+                <Icon name="tabler:brand-reddit" class="w-5 h-5" aria-hidden="true" />
+                <span>Reddit</span>
               </a>
             </li>
           </ul>
