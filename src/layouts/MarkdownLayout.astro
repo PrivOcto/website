@@ -20,6 +20,10 @@ const { frontmatter } = Astro.props;
 
 const metadata: MetaData = {
   title: frontmatter?.title,
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 // Format date to readable string
